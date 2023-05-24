@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Proj2DA.dir/main.cpp.o"
   "CMakeFiles/Proj2DA.dir/main.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o"
+  "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/src/menu.cpp.o"
+  "CMakeFiles/Proj2DA.dir/src/menu.cpp.o.d"
   "Proj2DA"
   "Proj2DA.pdb"
 )

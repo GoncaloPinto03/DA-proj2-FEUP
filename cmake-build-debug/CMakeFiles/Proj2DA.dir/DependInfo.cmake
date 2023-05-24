@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp" "CMakeFiles/Proj2DA.dir/main.cpp.o" "gcc" "CMakeFiles/Proj2DA.dir/main.cpp.o.d"
+  "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp" "CMakeFiles/Proj2DA.dir/main.cpp.o" "gcc" "CMakeFiles/Proj2DA.dir/main.cpp.o.d"
+  "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp" "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o" "gcc" "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o.d"
+  "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp" "CMakeFiles/Proj2DA.dir/src/menu.cpp.o" "gcc" "CMakeFiles/Proj2DA.dir/src/menu.cpp.o.d"
   )
 
 # Targets to which this target links.

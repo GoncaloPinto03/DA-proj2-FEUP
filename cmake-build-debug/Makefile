@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/237/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/237/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA"
+CMAKE_SOURCE_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Alg
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/237/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/237/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/auxiliar.o: src/auxiliar.cpp.o
+.PHONY : src/auxiliar.o
+
+# target to build an object file
+src/auxiliar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o
+.PHONY : src/auxiliar.cpp.o
+
+src/auxiliar.i: src/auxiliar.cpp.i
+.PHONY : src/auxiliar.i
+
+# target to preprocess a source file
+src/auxiliar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i
+.PHONY : src/auxiliar.cpp.i
+
+src/auxiliar.s: src/auxiliar.cpp.s
+.PHONY : src/auxiliar.s
+
+# target to generate assembly for a file
+src/auxiliar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s
+.PHONY : src/auxiliar.cpp.s
+
+src/menu.o: src/menu.cpp.o
+.PHONY : src/menu.o
+
+# target to build an object file
+src/menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/menu.cpp.o
+.PHONY : src/menu.cpp.o
+
+src/menu.i: src/menu.cpp.i
+.PHONY : src/menu.i
+
+# target to preprocess a source file
+src/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/menu.cpp.i
+.PHONY : src/menu.cpp.i
+
+src/menu.s: src/menu.cpp.s
+.PHONY : src/menu.s
+
+# target to generate assembly for a file
+src/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/menu.cpp.s
+.PHONY : src/menu.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +213,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/auxiliar.o"
+	@echo "... src/auxiliar.i"
+	@echo "... src/auxiliar.s"
+	@echo "... src/menu.o"
+	@echo "... src/menu.i"
+	@echo "... src/menu.s"
 .PHONY : help
 
 

@@ -3,4 +3,4 @@ project(Proj2DA)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Proj2DA main.cpp)
+add_executable(Proj2DA main.cpp src/auxiliar.cpp src/menu.cpp)

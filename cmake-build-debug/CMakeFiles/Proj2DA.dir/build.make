@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/237/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/237/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA"
+CMAKE_SOURCE_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Proj2DA.dir/depend.make
@@ -70,30 +70,62 @@ include CMakeFiles/Proj2DA.dir/progress.make
 include CMakeFiles/Proj2DA.dir/flags.make
 
 CMakeFiles/Proj2DA.dir/main.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
-CMakeFiles/Proj2DA.dir/main.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/main.cpp
+CMakeFiles/Proj2DA.dir/main.cpp.o: /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp
 CMakeFiles/Proj2DA.dir/main.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proj2DA.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/main.cpp.o -MF CMakeFiles/Proj2DA.dir/main.cpp.o.d -o CMakeFiles/Proj2DA.dir/main.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proj2DA.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/main.cpp.o -MF CMakeFiles/Proj2DA.dir/main.cpp.o.d -o CMakeFiles/Proj2DA.dir/main.cpp.o -c /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp
 
 CMakeFiles/Proj2DA.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp" > CMakeFiles/Proj2DA.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp > CMakeFiles/Proj2DA.dir/main.cpp.i
 
 CMakeFiles/Proj2DA.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp" -o CMakeFiles/Proj2DA.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp -o CMakeFiles/Proj2DA.dir/main.cpp.s
+
+CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o: /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp
+CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o -MF CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o -c /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp
+
+CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp > CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i
+
+CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp -o CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s
+
+CMakeFiles/Proj2DA.dir/src/menu.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/src/menu.cpp.o: /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp
+CMakeFiles/Proj2DA.dir/src/menu.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Proj2DA.dir/src/menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/menu.cpp.o -MF CMakeFiles/Proj2DA.dir/src/menu.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/menu.cpp.o -c /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp
+
+CMakeFiles/Proj2DA.dir/src/menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/src/menu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp > CMakeFiles/Proj2DA.dir/src/menu.cpp.i
+
+CMakeFiles/Proj2DA.dir/src/menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/src/menu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp -o CMakeFiles/Proj2DA.dir/src/menu.cpp.s
 
 # Object files for target Proj2DA
 Proj2DA_OBJECTS = \
-"CMakeFiles/Proj2DA.dir/main.cpp.o"
+"CMakeFiles/Proj2DA.dir/main.cpp.o" \
+"CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o" \
+"CMakeFiles/Proj2DA.dir/src/menu.cpp.o"
 
 # External object files for target Proj2DA
 Proj2DA_EXTERNAL_OBJECTS =
 
 Proj2DA: CMakeFiles/Proj2DA.dir/main.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/src/menu.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/build.make
 Proj2DA: CMakeFiles/Proj2DA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Proj2DA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Proj2DA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proj2DA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +137,6 @@ CMakeFiles/Proj2DA.dir/clean:
 .PHONY : CMakeFiles/Proj2DA.dir/clean
 
 CMakeFiles/Proj2DA.dir/depend:
-	cd "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles/Proj2DA.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/CMakeFiles/Proj2DA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Proj2DA.dir/depend
 
