@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Proj2DA.dir/main.cpp.o"
-  "CMakeFiles/Proj2DA.dir/main.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o"
+  "CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o"
+  "CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/src/Manager.cpp.o"
+  "CMakeFiles/Proj2DA.dir/src/Manager.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/src/main.cpp.o"
+  "CMakeFiles/Proj2DA.dir/src/main.cpp.o.d"
   "Proj2DA"
   "Proj2DA.pdb"
 )

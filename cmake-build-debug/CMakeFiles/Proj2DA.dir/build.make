@@ -69,31 +69,79 @@ include CMakeFiles/Proj2DA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Proj2DA.dir/flags.make
 
-CMakeFiles/Proj2DA.dir/main.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
-CMakeFiles/Proj2DA.dir/main.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/main.cpp
-CMakeFiles/Proj2DA.dir/main.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proj2DA.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/main.cpp.o -MF CMakeFiles/Proj2DA.dir/main.cpp.o.d -o CMakeFiles/Proj2DA.dir/main.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp"
+CMakeFiles/Proj2DA.dir/src/main.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/src/main.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/main.cpp
+CMakeFiles/Proj2DA.dir/src/main.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Proj2DA.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/main.cpp.o -MF CMakeFiles/Proj2DA.dir/src/main.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/main.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/main.cpp"
 
-CMakeFiles/Proj2DA.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp" > CMakeFiles/Proj2DA.dir/main.cpp.i
+CMakeFiles/Proj2DA.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/main.cpp" > CMakeFiles/Proj2DA.dir/src/main.cpp.i
 
-CMakeFiles/Proj2DA.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp" -o CMakeFiles/Proj2DA.dir/main.cpp.s
+CMakeFiles/Proj2DA.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/main.cpp" -o CMakeFiles/Proj2DA.dir/src/main.cpp.s
+
+CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/Manager.cpp
+CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Proj2DA.dir/src/Manager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/Manager.cpp.o -MF CMakeFiles/Proj2DA.dir/src/Manager.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/Manager.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/Manager.cpp"
+
+CMakeFiles/Proj2DA.dir/src/Manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/src/Manager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/Manager.cpp" > CMakeFiles/Proj2DA.dir/src/Manager.cpp.i
+
+CMakeFiles/Proj2DA.dir/src/Manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/src/Manager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/Manager.cpp" -o CMakeFiles/Proj2DA.dir/src/Manager.cpp.s
+
+CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/data_structures/Graph.cpp
+CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o -MF CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o.d -o CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Graph.cpp"
+
+CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Graph.cpp" > CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.i
+
+CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Graph.cpp" -o CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.s
+
+CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
+CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/data_structures/VertexEdge.cpp
+CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o -MF CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o.d -o CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o -c "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/VertexEdge.cpp"
+
+CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/VertexEdge.cpp" > CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.i
+
+CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/VertexEdge.cpp" -o CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s
 
 # Object files for target Proj2DA
 Proj2DA_OBJECTS = \
-"CMakeFiles/Proj2DA.dir/main.cpp.o"
+"CMakeFiles/Proj2DA.dir/src/main.cpp.o" \
+"CMakeFiles/Proj2DA.dir/src/Manager.cpp.o" \
+"CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o" \
+"CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o"
 
 # External object files for target Proj2DA
 Proj2DA_EXTERNAL_OBJECTS =
 
-Proj2DA: CMakeFiles/Proj2DA.dir/main.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/src/main.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/src/Manager.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o
+Proj2DA: CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/build.make
 Proj2DA: CMakeFiles/Proj2DA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Proj2DA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Proj2DA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proj2DA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -78,7 +78,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/main.cpp">
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Graph.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Graph.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/VertexEdge.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/VertexEdge.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/Manager.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/Manager.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/src/main.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
 		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/CMakeLists.txt">
