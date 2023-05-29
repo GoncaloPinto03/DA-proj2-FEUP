@@ -81,12 +81,12 @@ clean: CMakeFiles/Proj2DA.dir/clean
 CMakeFiles/Proj2DA.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Proj2DA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Proj2DA"
 .PHONY : CMakeFiles/Proj2DA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Proj2DA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Proj2DA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Proj2DA.dir/rule

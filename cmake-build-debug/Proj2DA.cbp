@@ -100,9 +100,6 @@
 		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/VertexEdge.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/H.cpp">
-			<Option target="Proj2DA"/>
-		</Unit>
 		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Manager.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>

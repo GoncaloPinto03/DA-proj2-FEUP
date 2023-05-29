@@ -31,7 +31,7 @@ int main() {
     auto v = manager.tspBruteforce();
 
     for (auto itr2 : v) {
-        cout << itr2->getPath()<<endl;
+        cout << itr2->getId()<<' ';
     }
 
     return 0;

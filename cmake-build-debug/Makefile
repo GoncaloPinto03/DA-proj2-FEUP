@@ -177,30 +177,6 @@ data_structures/VertexEdge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s
 .PHONY : data_structures/VertexEdge.cpp.s
 
-src/H.o: src/H.cpp.o
-.PHONY : src/H.o
-
-# target to build an object file
-src/H.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.o
-.PHONY : src/H.cpp.o
-
-src/H.i: src/H.cpp.i
-.PHONY : src/H.i
-
-# target to preprocess a source file
-src/H.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.i
-.PHONY : src/H.cpp.i
-
-src/H.s: src/H.cpp.s
-.PHONY : src/H.s
-
-# target to generate assembly for a file
-src/H.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.s
-.PHONY : src/H.cpp.s
-
 src/Manager.o: src/Manager.cpp.o
 .PHONY : src/Manager.o
 
@@ -288,9 +264,6 @@ help:
 	@echo "... data_structures/VertexEdge.o"
 	@echo "... data_structures/VertexEdge.i"
 	@echo "... data_structures/VertexEdge.s"
-	@echo "... src/H.o"
-	@echo "... src/H.i"
-	@echo "... src/H.s"
 	@echo "... src/Manager.o"
 	@echo "... src/Manager.i"
 	@echo "... src/Manager.s"

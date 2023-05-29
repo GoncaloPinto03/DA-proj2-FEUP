@@ -111,24 +111,10 @@ CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/VertexEdge.cpp -o CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s
 
-CMakeFiles/Proj2DA.dir/src/H.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
-CMakeFiles/Proj2DA.dir/src/H.cpp.o: /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/H.cpp
-CMakeFiles/Proj2DA.dir/src/H.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Proj2DA.dir/src/H.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/H.cpp.o -MF CMakeFiles/Proj2DA.dir/src/H.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/H.cpp.o -c /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/H.cpp
-
-CMakeFiles/Proj2DA.dir/src/H.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj2DA.dir/src/H.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/H.cpp > CMakeFiles/Proj2DA.dir/src/H.cpp.i
-
-CMakeFiles/Proj2DA.dir/src/H.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj2DA.dir/src/H.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/H.cpp -o CMakeFiles/Proj2DA.dir/src/H.cpp.s
-
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.cpp
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o -MF CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o -c /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.cpp
 
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/Proj2DA.dir/src/Read_files.cpp.s: cmake_force
 CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: CMakeFiles/Proj2DA.dir/flags.make
 CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Manager.cpp
 CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: CMakeFiles/Proj2DA.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Proj2DA.dir/src/Manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Proj2DA.dir/src/Manager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj2DA.dir/src/Manager.cpp.o -MF CMakeFiles/Proj2DA.dir/src/Manager.cpp.o.d -o CMakeFiles/Proj2DA.dir/src/Manager.cpp.o -c /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Manager.cpp
 
 CMakeFiles/Proj2DA.dir/src/Manager.cpp.i: cmake_force
@@ -158,7 +144,6 @@ Proj2DA_OBJECTS = \
 "CMakeFiles/Proj2DA.dir/src/main.cpp.o" \
 "CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o" \
 "CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o" \
-"CMakeFiles/Proj2DA.dir/src/H.cpp.o" \
 "CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o" \
 "CMakeFiles/Proj2DA.dir/src/Manager.cpp.o"
 
@@ -168,12 +153,11 @@ Proj2DA_EXTERNAL_OBJECTS =
 Proj2DA: CMakeFiles/Proj2DA.dir/src/main.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o
-Proj2DA: CMakeFiles/Proj2DA.dir/src/H.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/src/Manager.cpp.o
 Proj2DA: CMakeFiles/Proj2DA.dir/build.make
 Proj2DA: CMakeFiles/Proj2DA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Proj2DA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Proj2DA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proj2DA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

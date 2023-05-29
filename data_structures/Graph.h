@@ -29,7 +29,8 @@ public:
     bool removeVertex(const int &id);
 
     int getNumVertex() const;
-     set<Vertex *, CompararVertex> getVertexSet() const;
+    set<Vertex *, CompararVertex> getVertexSet() const;
+
 
     Vertex * findVertex(const int &id) const;
     int findVertexIdx(const int &id) const;

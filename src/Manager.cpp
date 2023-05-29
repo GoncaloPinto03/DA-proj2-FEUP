@@ -29,10 +29,22 @@ void Manager::ex4_1() {
 
 
 void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path) {
+    bool vi=false;
+    double costt=0;
     if (num_visited == graph.getNumVertex()) {
         // refactor later (use dijkstra to find minimum between current and start[findVertex(0)])
         // for real world graphs use latitude and logitude for distance instead of dijkstra
-        double cost = current_cost + current->getPath()->getWeight();
+        for(Edge* e: current->getAdj()){
+            Vertex* w = e->getDest();
+            if(w==graph.findVertex(0)){
+                costt = costt + current->getPath()->getWeight();
+                vi=true;
+            }
+
+        }
+        if(vi==false) return;
+
+        double cost = current_cost + costt;
         if (cost < min_cost) {
             min_cost = cost;
             tsp_path.clear();
@@ -121,5 +133,8 @@ unsigned int Manager::tspBT(const unsigned int **dists, unsigned int n, unsigned
     tspBTRec(dists, n, 1, 0, curPath, minDist, path);
     return minDist;
 }
+
+
+
 
 

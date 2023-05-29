@@ -24,6 +24,7 @@ public:
     void tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
     std::vector<Vertex *> tspBruteforce();
 
+
     void tsp();
     void tspBTRec(const unsigned int **dists, unsigned int n, unsigned int curIndex, unsigned int curDist, unsigned int curPath[], unsigned int &minDist, unsigned int path[]);
     unsigned int tspBT(const unsigned int **dists, unsigned int n, unsigned int path[]);
@@ -34,7 +35,9 @@ private:
     Graph graph;
 
 
-    };
+    void tspBacktrackBruteforce(Vertex *current, double current_cost, int num_visited, double &min_cost,
+                                vector<Vertex *> &tsp_path, vector<int> &current_path);
+};
 
 
 #endif //PROJ2DA_MANAGER_H
