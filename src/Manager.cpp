@@ -37,7 +37,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
         for(Edge* e: current->getAdj()){
             Vertex* w = e->getDest();
             if(w==graph.findVertex(0)){
-                costt = costt + current->getPath()->getWeight();
+                costt  += current->getPath()->getWeight();
                 vi=true;
             }
 
@@ -54,8 +54,11 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
                 tsp_path.push_back(e->getSource());
             }
 
-            std::reverse(tsp_path.begin(), tsp_path.end());
+            std::reverse(tsp_path.begin(), tsp_path.end()-1);
+
+
         }
+
         return;
 
     }
@@ -70,6 +73,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
             w->setPath(nullptr);
         }
     }
+
 }
 
 std::vector<Vertex *> Manager::tspBruteforce() {

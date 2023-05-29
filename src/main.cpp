@@ -30,9 +30,13 @@ int main() {
 
     auto v = manager.tspBruteforce();
 
+    cout << "0 ";
+
     for (auto itr2 : v) {
-        cout << itr2->getId()<<' ';
+        cout << itr2->getId() << ' ';
     }
+
+    cout << "0";
 
     return 0;
 }
