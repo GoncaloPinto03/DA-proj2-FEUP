@@ -1,18 +1,70 @@
-// By: Gonçalo Leão
-
 #include "Graph.h"
+#include <limits>
+#include <algorithm>
+#include <utility>
+
+using namespace std;
+
+Graph::Graph() {
+    this->numVertex = 0;
+}
+
+Graph::Graph(int nrVertex) {
+    this->numVertex = nrVertex;
+}
+
+bool Graph::addVertex(const int &id) {
+    if (findVertex(id) != nullptr)
+        return false;
+    auto *v1 = new Vertex(id);
+    vertexSet.insert(v1);
+    return true;
+}
+bool Graph::addVertex(const int &id, double longitude, double latitude) {
+    if (findVertex(id) != nullptr)
+        return false;
+    auto *v1 = new Vertex(id, longitude, latitude);
+    vertexSet.insert(v1);
+    return true;
+}
+bool Graph::addVertex(const int &id, string name) {
+    if (findVertex(id) != nullptr)
+        return false;
+    auto *v1 = new Vertex(id, std::move(name));
+    vertexSet.insert(v1);
+    return true;
+}
+
+bool Graph::addEdge(const int &sourc, const int &dest, double w) const {
+    Vertex *v1 = findVertex(sourc);
+    Vertex *v2 = findVertex(dest);
+    if (v1 == nullptr || v2 == nullptr)
+        return false;
+
+    v1->getAdj().insert(v2->getAdj().end(), new Edge(v2, w));
+    return true;
+}
+
+
+bool Graph::removeVertex(const int &id) {
+    for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it) {
+        if ((*it)->getId() == id) {
+            vertexSet.erase(it);
+            return true;
+        }
+    }
+    return false;
+}
+
 
 int Graph::getNumVertex() const {
     return vertexSet.size();
 }
 
-std::vector<Vertex *> Graph::getVertexSet() const {
+set<Vertex *> Graph::getVertexSet() const {
     return vertexSet;
 }
 
-/*
- * Auxiliary function to find a vertex with a given content.
- */
 Vertex * Graph::findVertex(const int &id) const {
     for (auto v : vertexSet)
         if (v->getId() == id)
@@ -20,71 +72,26 @@ Vertex * Graph::findVertex(const int &id) const {
     return nullptr;
 }
 
-/*
- * Finds the index of the vertex with a given content.
- */
 int Graph::findVertexIdx(const int &id) const {
-    for (unsigned i = 0; i < vertexSet.size(); i++)
-        if (vertexSet[i]->getId() == id)
+    int i = 0;
+    for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it, ++i)
+        if ((*it)->getId() == id)
             return i;
     return -1;
 }
-/*
- *  Adds a vertex with a given content or info (in) to a graph (this).
- *  Returns true if successful, and false if a vertex with that content already exists.
- */
-bool Graph::addVertex(const int &id) {
-    if (findVertex(id) != nullptr)
-        return false;
-    vertexSet.push_back(new Vertex(id));
-    return true;
+
+
+void Graph::resetVisited() {
+    for (auto v : vertexSet)
+        v->setVisited(false);
 }
 
-/*
- * Adds an edge to a graph (this), given the contents of the source and
- * destination vertices and the edge weight (w).
- * Returns true if successful, and false if the source or destination vertex does not exist.
- */
-bool Graph::addEdge(const int &sourc, const int &dest, double w) {
-    auto v1 = findVertex(sourc);
-    auto v2 = findVertex(dest);
-    if (v1 == nullptr || v2 == nullptr)
-        return false;
-    v1->addEdge(v2, w);
-    return true;
+void Graph::resetDist() {
+    for (auto v : vertexSet)
+        v->setDist(0);
 }
 
-bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w) {
-    auto v1 = findVertex(sourc);
-    auto v2 = findVertex(dest);
-    if (v1 == nullptr || v2 == nullptr)
-        return false;
-    auto e1 = v1->addEdge(v2, w);
-    auto e2 = v2->addEdge(v1, w);
-    e1->setReverse(e2);
-    e2->setReverse(e1);
-    return true;
-}
-
-void deleteMatrix(int **m, int n) {
-    if (m != nullptr) {
-        for (int i = 0; i < n; i++)
-            if (m[i] != nullptr)
-                delete [] m[i];
-        delete [] m;
-    }
-}
-
-void deleteMatrix(double **m, int n) {
-    if (m != nullptr) {
-        for (int i = 0; i < n; i++)
-            if (m[i] != nullptr)
-                delete [] m[i];
-        delete [] m;
-    }
-}
-
-Graph::~Graph() {
-    deleteMatrix(distMatrix, vertexSet.size());
-    deleteMatrix(pathMatrix, vertexSet.size());
+void Graph::resetPath() {
+    for (auto v : vertexSet)
+        v->setPath(nullptr);
 }

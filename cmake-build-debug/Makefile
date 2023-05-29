@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/237/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/237/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA"
+CMAKE_SOURCE_DIR = /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Alg
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/237/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/237/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,29 +177,53 @@ data_structures/VertexEdge.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s
 .PHONY : data_structures/VertexEdge.cpp.s
 
-src/Manager.o: src/Manager.cpp.o
-.PHONY : src/Manager.o
+src/H.o: src/H.cpp.o
+.PHONY : src/H.o
 
 # target to build an object file
-src/Manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.o
-.PHONY : src/Manager.cpp.o
+src/H.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.o
+.PHONY : src/H.cpp.o
 
-src/Manager.i: src/Manager.cpp.i
-.PHONY : src/Manager.i
+src/H.i: src/H.cpp.i
+.PHONY : src/H.i
 
 # target to preprocess a source file
-src/Manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.i
-.PHONY : src/Manager.cpp.i
+src/H.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.i
+.PHONY : src/H.cpp.i
 
-src/Manager.s: src/Manager.cpp.s
-.PHONY : src/Manager.s
+src/H.s: src/H.cpp.s
+.PHONY : src/H.s
 
 # target to generate assembly for a file
-src/Manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.s
-.PHONY : src/Manager.cpp.s
+src/H.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/H.cpp.s
+.PHONY : src/H.cpp.s
+
+src/Read_files.o: src/Read_files.cpp.o
+.PHONY : src/Read_files.o
+
+# target to build an object file
+src/Read_files.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o
+.PHONY : src/Read_files.cpp.o
+
+src/Read_files.i: src/Read_files.cpp.i
+.PHONY : src/Read_files.i
+
+# target to preprocess a source file
+src/Read_files.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.i
+.PHONY : src/Read_files.cpp.i
+
+src/Read_files.s: src/Read_files.cpp.s
+.PHONY : src/Read_files.s
+
+# target to generate assembly for a file
+src/Read_files.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.s
+.PHONY : src/Read_files.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -240,9 +264,12 @@ help:
 	@echo "... data_structures/VertexEdge.o"
 	@echo "... data_structures/VertexEdge.i"
 	@echo "... data_structures/VertexEdge.s"
-	@echo "... src/Manager.o"
-	@echo "... src/Manager.i"
-	@echo "... src/Manager.s"
+	@echo "... src/H.o"
+	@echo "... src/H.i"
+	@echo "... src/H.s"
+	@echo "... src/Read_files.o"
+	@echo "... src/Read_files.i"
+	@echo "... src/Read_files.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

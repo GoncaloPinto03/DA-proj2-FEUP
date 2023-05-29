@@ -1,6 +1,8 @@
-CMakeFiles/Proj2DA.dir/src/main.cpp.o: \
- /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: \
+ /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.cpp \
+ /usr/include/stdc-predef.h \
+ /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.h \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -145,9 +147,8 @@ CMakeFiles/Proj2DA.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.h \
- /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
