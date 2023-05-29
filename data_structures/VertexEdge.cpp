@@ -79,22 +79,30 @@ Edge::Edge() {
     this->dest = nullptr;
     this->weight = 0;
 }
-Edge::Edge(Vertex* dest, double weight) {
+Edge::Edge(Vertex* source, Vertex* dest, double weight) {
+    this->source = source;
     this->dest = dest;
     this->weight = weight;
 }
-Edge::Edge(Vertex* dest) {
+Edge::Edge(Vertex* source, Vertex* dest) {
+    this->source = source;
     this->dest = dest;
     this->weight = 0;
 }
 Vertex* Edge::getDest() const {
     return dest;
 }
+Vertex* Edge::getSource() const {
+    return source;
+}
 double Edge::getWeight() const {
     return weight;
 }
 void Edge::setDest(Vertex* dest) {
     this->dest = dest;
+}
+void Edge::setSource(Vertex* source) {
+    this->source = source;
 }
 void Edge::setWeight(double weight) {
     this->weight = weight;

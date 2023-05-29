@@ -48,14 +48,17 @@ protected:
 class Edge {
 public:
     Edge();
-    Edge(Vertex* dest);
-    Edge(Vertex* dest, double weight);
+    Edge(Vertex* source, Vertex* dest);
+    Edge(Vertex* source, Vertex* dest, double weight);
 
     Vertex* getDest() const;
+    Vertex* getSource() const;
     double getWeight() const;
     void setDest(Vertex* dest);
+    void setSource(Vertex* source);
     void setWeight(double weight);
 private:
+    Vertex* source;
     Vertex* dest;
     double weight;
 };

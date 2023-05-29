@@ -41,7 +41,7 @@ bool Graph::addEdge(const int &sourc, const int &dest, double w) const {
     if (v1 == nullptr || v2 == nullptr)
         return false;
 
-    v1->getAdj().insert(v2->getAdj().end(), new Edge(v2, w));
+    v1->getAdj().insert(v2->getAdj().end(), new Edge(v1, v2, w));
     return true;
 }
 
