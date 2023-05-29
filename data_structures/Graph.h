@@ -11,6 +11,11 @@
 #include "VertexEdge.h"
 using namespace std;
 
+struct CompararVertex
+{
+    bool operator()(const Vertex* lhs, const Vertex* rhs) const  { return lhs->getId() < rhs->getId(); }
+};
+
 class Graph {
 public:
     Graph();
@@ -24,7 +29,7 @@ public:
     bool removeVertex(const int &id);
 
     int getNumVertex() const;
-    set<Vertex *> getVertexSet() const;
+     set<Vertex *, CompararVertex> getVertexSet() const;
 
     Vertex * findVertex(const int &id) const;
     int findVertexIdx(const int &id) const;
@@ -35,9 +40,8 @@ public:
 
 protected:
     int numVertex;
-    set<Vertex *> vertexSet;
+    //set<Vertex *> vertexSet;
+    set<Vertex*, CompararVertex> vertexSet;
 };
 
 #endif
-
-

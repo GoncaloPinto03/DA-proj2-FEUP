@@ -26,6 +26,8 @@ void Manager::set_graph(Graph newGraph) {
 void Manager::ex4_1() {
 
 }
+
+
 void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path) {
     if (num_visited == graph.getNumVertex()) {
         // refactor later (use dijkstra to find minimum between current and start[findVertex(0)])
@@ -43,6 +45,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
             std::reverse(tsp_path.begin(), tsp_path.end());
         }
         return;
+
     }
 
     for (Edge* e: current->getAdj()) { // may need refactor
@@ -118,4 +121,5 @@ unsigned int Manager::tspBT(const unsigned int **dists, unsigned int n, unsigned
     tspBTRec(dists, n, 1, 0, curPath, minDist, path);
     return minDist;
 }
+
 

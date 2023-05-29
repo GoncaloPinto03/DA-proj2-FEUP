@@ -33,6 +33,8 @@ public:
     void setPath(Edge *path);
 
 
+    void addAdj(Vertex *v1, Vertex *v2, int w);
+
 protected:
     int id;
     string name;
@@ -43,6 +45,9 @@ protected:
     list<Edge*> adj;
     Edge *path = nullptr;
     bool operator<(Vertex & vertex) const;
+
+    void addAdj(Vertex *v1, Vertex *v2, int w) const;
+
 };
 
 class Edge {
@@ -61,6 +66,8 @@ private:
     Vertex* source;
     Vertex* dest;
     double weight;
+
+
 };
 
 #endif //UNTITLED1_VERTEXEDGE_H

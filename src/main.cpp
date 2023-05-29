@@ -9,28 +9,30 @@
 int main() {
     Read_files readfiles = Read_files();
     Manager manager = Manager();
-    readfiles.read_toygraphs(3);
-    //manager.read_extrafully(11);
+    readfiles.read_toygraphs(1);
+    //readfiles.read_extrafully(2);
 
     Graph graph = readfiles.get_graph();
     manager.set_graph(graph);
 
-    /*
-    for (auto itr : graph.getVertexSet()) {
-        cout << itr->getId()<<endl;
+
+    /*for (auto itr : graph.getVertexSet()) {
+        cout << itr->getAdj().size()<<"//";
     }
-     */
+
+    for (auto vertex: graph.getVertexSet()) {
+        for(auto edge : vertex->getAdj()){
+            cout << edge->getSource()->getId() << " -> " << edge->getDest()->getId() << " " << edge->getWeight()<<endl;
+        }
+    }*/
+
+
 
     auto v = manager.tspBruteforce();
 
     for (auto itr2 : v) {
-        cout << itr2->getId()<<endl;
+        cout << itr2->getPath()<<endl;
     }
-
-
-
-
-
 
     return 0;
 }

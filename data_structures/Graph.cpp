@@ -27,6 +27,7 @@ bool Graph::addVertex(const int &id, double longitude, double latitude) {
     vertexSet.insert(v1);
     return true;
 }
+
 bool Graph::addVertex(const int &id, string name) {
     if (findVertex(id) != nullptr)
         return false;
@@ -41,7 +42,8 @@ bool Graph::addEdge(const int &sourc, const int &dest, double w) const {
     if (v1 == nullptr || v2 == nullptr)
         return false;
 
-    v1->getAdj().insert(v2->getAdj().end(), new Edge(v1, v2, w));
+    //v1->getAdj().insert(v2->getAdj().end(), new Edge(v1, v2, w));
+    v1->addAdj(v1,v2,w);
     return true;
 }
 
@@ -61,7 +63,7 @@ int Graph::getNumVertex() const {
     return vertexSet.size();
 }
 
-set<Vertex *> Graph::getVertexSet() const {
+ set<Vertex *, CompararVertex> Graph::getVertexSet() const {
     return vertexSet;
 }
 
@@ -95,3 +97,5 @@ void Graph::resetPath() {
     for (auto v : vertexSet)
         v->setPath(nullptr);
 }
+
+

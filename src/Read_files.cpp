@@ -84,7 +84,7 @@ void Read_files::read_extrafully(int input) {
         stringstream ss(line);
         string t;
         vector<string> aux;
-        while (getline(ss, t, ',')){
+        while (getline(ss, t, ',')) {
             aux.push_back(t);
         }
 
@@ -180,42 +180,54 @@ void Read_files::read_toygraphs(int input) {
     getline(file,line);
     if (input == 3){
         while(getline(file,line)){
+            if (!line.empty() && line[line.length() - 1] == '\r') {
+                line.erase(line.length() - 1);
+            }
             stringstream ss(line);
             string t;
             vector<string>aux;
             while(getline(ss,t,',')){
                 aux.push_back(t);
             }
+
+
             int node_1= stoi(aux[0]);
             int node_2= stoi(aux[1]);
             int w= stoi (aux[2]);
             string name1= aux[3];
             string name2= aux[4];
             this->graph.addVertex(node_1, name1);
-            this->graph.addVertex(node_2, name2);
+            this->graph.addVertex(node_2, name2) ;
             this->graph.addEdge(node_1, node_2, w);
+            //cout << this->graph.addEdge(node_2, node_1, w) << endl;
+            //cout << node_1 << ' '<< node_2 << ' '<<w <<' ' << name1<<' ' << name2 << endl;
+
+
+
 
         }
 
     }
-    else{
-        while (getline(file, line)) {
-            stringstream ss(line);
-            string t;
-            vector<string> aux;
-            while (getline(ss, t, ',')) {
-                aux.push_back(t);
-            }
-            int node_1 = stoi(aux[0]);
-            int node_2 = stoi(aux[1]);
-            int w = stoi(aux[2]);
-            this->graph.addVertex(node_1);
-            this->graph.addVertex(node_2);
-            this->graph.addEdge(node_1, node_2, w);
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string token;
+        vector<string> tokens;
+        while (getline(ss, token, ',')) {
+            tokens.push_back(token);
         }
+        int node1 = stoi(tokens[0]);
+        int node2 = stoi(tokens[1]);
+        double weight = stod(tokens[2]);
+
+        this->graph.addVertex(node1);
+
+        this->graph.addVertex(node2);
+
+        this->graph.addEdge(node1, node2, weight) ;
+
+        this->graph.addEdge(node2, node1, weight) ;
+
     }
-
-
     file.close();
 }
 
