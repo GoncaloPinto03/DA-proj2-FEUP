@@ -91,49 +91,6 @@ std::vector<Vertex *> Manager::tspBruteforce() {
 }
 
 
-void Manager::tspBF(Vertex* current, std::vector<Vertex *>& tsp_path, double current_cost, double& min_cost, std::vector<Vertex *>& best_tsp_path) {
-    auto numVertices = graph.getNumVertex();
-
-    if (tsp_path.size() == numVertices) {
-        auto returnEdge = graph.findEdge(current->getId(), graph.findVertex(0)->getId());
-        if (returnEdge != nullptr) {
-            auto total_cost = current_cost + returnEdge->getWeight();
-            if (total_cost < min_cost) {
-                min_cost = total_cost;
-                best_tsp_path = tsp_path;
-            }
-        }
-        return;
-    }
-    for (auto e : current->getAdj()) {
-        auto neighborVertex = e->getDest();
-        if (!neighborVertex->isVisited()) {
-            neighborVertex->setVisited(true);
-            tsp_path.push_back(neighborVertex);
-            auto edgeCost = e->getWeight();
-            tspBF(neighborVertex, tsp_path, current_cost + edgeCost, min_cost, best_tsp_path);
-            tsp_path.pop_back();
-            neighborVertex->setVisited(false);
-        }
-    }
-}
-
-double Manager::tspBF_aux(std::vector<Vertex *>& best_tsp_path) {
-    std::vector<Vertex *> tsp_path;
-
-    for (auto& v: graph.getVertexSet()) {
-        v->setVisited(false);
-        v->setPath(nullptr);
-    }
-
-    double min_cost = std::numeric_limits<double>::max();
-
-    auto init = graph.findVertex(0);
-    init->setVisited(true);
-    tspBF(init, tsp_path, 0, min_cost, best_tsp_path);
-
-    return min_cost;
-}
 
 
 
