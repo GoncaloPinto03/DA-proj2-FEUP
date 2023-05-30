@@ -15,7 +15,10 @@ struct CompararVertex
 {
     bool operator()(const Vertex* lhs, const Vertex* rhs) const  { return lhs->getId() < rhs->getId(); }
 };
-
+struct CompareWeight
+{
+    bool operator()(const Edge* lhs, const Edge* rhs) const  { return lhs->getWeight() < rhs->getWeight(); }
+};
 class Graph {
 public:
     Graph();
