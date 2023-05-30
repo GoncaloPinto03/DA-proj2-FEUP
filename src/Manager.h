@@ -20,7 +20,7 @@ public:
 
     // 4.1
     void tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
-    std::vector<Vertex *> tspBruteforce();
+    void tspBruteforce();
 
     // 4.2
     void primMST(vector<Edge*>& mst);

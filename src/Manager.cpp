@@ -74,7 +74,9 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
 }
 
 // 4.1
-std::vector<Vertex *> Manager::tspBruteforce() {
+void Manager::tspBruteforce() {
+
+    clock_t start = clock();
 
     std::vector<Vertex *> tsp_path;
 
@@ -91,9 +93,18 @@ std::vector<Vertex *> Manager::tspBruteforce() {
 
     tspBacktrackBruteforce(init, 0, 1, min_cost, tsp_path);
 
-    cout << min_cost << endl;
+    cout << "Minimum Cost: "<< min_cost << endl;
 
-    return tsp_path;
+    clock_t end = clock();
+
+    cout << '0'<< " -> ";
+
+    for (auto e : tsp_path) {
+        cout << e->getId() << " -> ";
+    }
+    cout << '0' << endl;
+
+    cout << "Execution Time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << endl;
 
 }
 
@@ -160,6 +171,9 @@ void Manager::preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<b
 // 4.2
 // Function to find the minimum spanning tree and perform preorder traversal
 void Manager::findMinMSTAndPreorderTraversal(vector<int>& preorder) {
+
+    clock_t start = clock();
+
     vector<Edge*> mst;
     primMST(mst);
 
@@ -172,6 +186,9 @@ void Manager::findMinMSTAndPreorderTraversal(vector<int>& preorder) {
     vector<bool> visited(graph.getNumVertex(), false);
     preorderTraversal(mst, mst[0]->getSource(), visited,preorder);
     cout << endl;
+    clock_t end = clock();
+    cout << "Execution Time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << endl;
+
 }
 
 
