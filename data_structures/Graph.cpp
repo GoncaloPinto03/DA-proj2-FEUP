@@ -63,7 +63,7 @@ int Graph::getNumVertex() const {
     return vertexSet.size();
 }
 
-set<Vertex *, CompararVertex> Graph::getVertexSet() const {
+set<Vertex *, CompareVertex> Graph::getVertexSet() const {
     return vertexSet;
 }
 
@@ -136,3 +136,4 @@ Edge * Graph::findEdge(const Vertex &source, const Vertex &dest) {
     }
     return nullptr;
 }
+

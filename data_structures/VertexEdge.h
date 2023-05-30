@@ -70,4 +70,5 @@ private:
 
 };
 
+
 #endif //UNTITLED1_VERTEXEDGE_H

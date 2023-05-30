@@ -143,13 +143,9 @@ void Manager::primMST(vector<Edge*>& mst) {
 
         mst.push_back(edge);
 
-        for (const auto& neighbor : graph.getVertexSet()) {
-            if (neighbor == v) {
-                for (auto edge : neighbor->getAdj()){
-                    if(!visited[edge->getDest()->getId()]){
-                        pq.push(edge);
-                    }
-                }
+        for (auto edge : v->getAdj()){
+            if(!visited[edge->getDest()->getId()]){
+                pq.push(edge);
             }
         }
     }
@@ -163,7 +159,7 @@ void Manager::preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<b
     preorder.push_back(node->getId());
 
     for (const auto& edge : mst) {
-        if (edge->getSource() == node && !visited[edge->getDest()->getId()])
+        if (edge->getSource() == node)
             preorderTraversal(mst, edge->getDest(), visited,preorder);
     }
 }
@@ -177,15 +173,18 @@ void Manager::findMinMSTAndPreorderTraversal(vector<int>& preorder) {
     vector<Edge*> mst;
     primMST(mst);
 
+    double total_dist = 0;
     cout << "Minimum Spanning Tree (MST) connections:" << endl;
     for (const auto& edge : mst) {
         cout << edge->getSource()->getId() << " -> " << edge->getDest()->getId() << " Distance: " << edge->getWeight() << endl;
+        total_dist += edge->getWeight();
     }
 
     cout << "Preorder Traversal of MST (Left to Right): ";
     vector<bool> visited(graph.getNumVertex(), false);
     preorderTraversal(mst, mst[0]->getSource(), visited,preorder);
     cout << endl;
+    cout << "Total Distance: "<< total_dist << endl;
     clock_t end = clock();
     cout << "Execution Time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << endl;
 

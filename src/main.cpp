@@ -18,7 +18,7 @@ int main() {
 
     // 4.1
     //manager.tspBruteforce();
-    
+
     // 4.2
     vector<int> preorder;
     manager.findMinMSTAndPreorderTraversal(preorder);

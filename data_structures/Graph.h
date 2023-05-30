@@ -11,7 +11,7 @@
 #include "VertexEdge.h"
 using namespace std;
 
-struct CompararVertex
+struct CompareVertex
 {
     bool operator()(const Vertex* lhs, const Vertex* rhs) const  { return lhs->getId() < rhs->getId(); }
 };
@@ -32,7 +32,7 @@ public:
     bool removeVertex(const int &id);
 
     int getNumVertex() const;
-    set<Vertex *, CompararVertex> getVertexSet() const;
+    set<Vertex *, CompareVertex> getVertexSet() const;
 
 
     Vertex * findVertex(const int &id) const;
@@ -46,10 +46,11 @@ public:
 
     void dijkstra(Vertex* source);
 
+
 protected:
     int numVertex;
     //set<Vertex *> vertexSet;
-    set<Vertex*, CompararVertex> vertexSet;
+    set<Vertex*, CompareVertex> vertexSet;
 };
 
 #endif
