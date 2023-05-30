@@ -54,7 +54,7 @@ list<Edge*> Vertex::getAdj() const {
     return this->adj;
 }
 
-void Vertex::addAdj(Vertex *v1, Vertex *v2, int w)  {
+void Vertex::addAdj(Vertex *v1, Vertex *v2, double w)  {
 
     //adj.insert(adj.end(), new Edge(v1, v2, w));
     adj.push_back(new Edge(v1,v2,w));

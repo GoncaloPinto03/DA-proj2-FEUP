@@ -33,7 +33,7 @@ public:
     void setPath(Edge *path);
 
 
-    void addAdj(Vertex *v1, Vertex *v2, int w);
+    void addAdj(Vertex *v1, Vertex *v2, double w);
 
 protected:
     int id;
@@ -46,7 +46,7 @@ protected:
     Edge *path = nullptr;
     bool operator<(Vertex & vertex) const;
 
-    void addAdj(Vertex *v1, Vertex *v2, int w) const;
+    void addAdj(Vertex *v1, Vertex *v2, double w) const;
 
 };
 

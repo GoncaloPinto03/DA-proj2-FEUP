@@ -189,9 +189,9 @@ void Read_files::read_toygraphs(int input) {
             }
 
 
-            int node_1= stoi(aux[0]);
-            int node_2= stoi(aux[1]);
-            int w= stoi (aux[2]);
+            int node_1 = stoi(aux[0]);
+            int node_2 = stoi(aux[1]);
+            double w = stod (aux[2]);
             string name1= aux[3];
             string name2= aux[4];
             this->graph.addVertex(node_1, name1);
