@@ -23,12 +23,9 @@ void Manager::set_graph(Graph newGraph) {
     this->graph = newGraph;
 }
 
-void Manager::ex4_1() {
-
-}
-
 
 void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path) {
+
     bool vi=false;
     double costt=0;
     if (num_visited == graph.getNumVertex()) {
@@ -79,16 +76,24 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
 std::vector<Vertex *> Manager::tspBruteforce() {
 
     std::vector<Vertex *> tsp_path;
+
     for (auto& v: graph.getVertexSet()) {
         v->setVisited(false);
         v->setPath(nullptr);
     }
+
     double min_cost = std::numeric_limits<double>::max();
+
     auto init = graph.findVertex(0);
+
     init->setVisited(true);
+
     tspBacktrackBruteforce(init, 0, 1, min_cost, tsp_path);
+
     cout << min_cost << endl;
+
     return tsp_path;
+
 }
 
 
