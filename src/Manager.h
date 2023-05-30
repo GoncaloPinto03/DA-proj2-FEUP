@@ -22,7 +22,7 @@ public:
     void ex4_1();
 
     void tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
-    std::vector<Vertex *> tspBruteforce();
+    double tspBruteforce();
 
 
     void tsp();
