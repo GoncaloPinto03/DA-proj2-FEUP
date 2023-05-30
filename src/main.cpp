@@ -25,18 +25,14 @@ int main() {
             cout << edge->getSource()->getId() << " -> " << edge->getDest()->getId() << " " << edge->getWeight()<<endl;
         }
     }*/
-
-
-
+    std::vector<Vertex *> tsp_path;
     auto v = manager.tspBruteforce();
-
-    cout << "0 ";
-
-    for (auto itr2 : v) {
-        cout << itr2->getId() << ' ';
+    for (auto e : v) {
+        cout << e->getId() << " -> ";
     }
+    cout << endl;
 
-    cout << "0";
+
 
     return 0;
 }

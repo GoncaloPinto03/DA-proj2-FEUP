@@ -35,9 +35,13 @@ public:
     Vertex * findVertex(const int &id) const;
     int findVertexIdx(const int &id) const;
 
+    Edge * findEdge(const Vertex &source, const Vertex &dest);
+
     void resetVisited();
     void resetDist();
     void resetPath();
+
+    void dijkstra(Vertex* source);
 
 protected:
     int numVertex;

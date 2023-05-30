@@ -63,7 +63,7 @@ int Graph::getNumVertex() const {
     return vertexSet.size();
 }
 
- set<Vertex *, CompararVertex> Graph::getVertexSet() const {
+set<Vertex *, CompararVertex> Graph::getVertexSet() const {
     return vertexSet;
 }
 
@@ -98,4 +98,41 @@ void Graph::resetPath() {
         v->setPath(nullptr);
 }
 
+void Graph::dijkstra(Vertex* source) {
+    auto cmp = [](Vertex* a, Vertex* b) {
+        return a->getDist() < b->getDist();
+    };
+    std::priority_queue<Vertex *, std::vector<Vertex *>, decltype(cmp)> pq(cmp);
 
+    for (Vertex* v: vertexSet) {
+        v->setVisited(false);
+        v->setDist(std::numeric_limits<double>::max());
+    }
+
+    source->setDist(0);
+    pq.push(source);
+    while (!pq.empty()) {
+        Vertex* u = pq.top(); pq.pop();
+        u->setVisited(true);
+
+        for (Edge* e: u->getAdj()) {
+            Vertex* v = e->getDest();
+            double w = e->getWeight();
+            if (!v->isVisited() && u->getDist() != std::numeric_limits<double>::max() && u->getDist() + w < v->getDist()) {
+                v->setDist(u->getDist() + w);
+                pq.push(v);
+            }
+        }
+    }
+}
+
+Edge * Graph::findEdge(const Vertex &source, const Vertex &dest) {
+    for (auto v : getVertexSet()) {
+        for (auto e : v->getAdj()) {
+            if (e->getSource()->getId() == source.getId() && e->getDest()->getId() == dest.getId()) {
+                return e;
+            }
+        }
+    }
+    return nullptr;
+}

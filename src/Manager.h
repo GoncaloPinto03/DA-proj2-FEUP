@@ -22,16 +22,19 @@ public:
     void ex4_1();
 
     void tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
-    double tspBruteforce();
+    std::vector<Vertex *> tspBruteforce();
 
 
     void tsp();
     void tspBTRec(const unsigned int **dists, unsigned int n, unsigned int curIndex, unsigned int curDist, unsigned int curPath[], unsigned int &minDist, unsigned int path[]);
     unsigned int tspBT(const unsigned int **dists, unsigned int n, unsigned int path[]);
 
+    double tspBF_aux(std::vector<Vertex *>& best_tsp_path);
+    void tspBF(Vertex* current, std::vector<Vertex *>& tsp_path, double current_cost, double& min_cost, std::vector<Vertex *>& best_tsp_path);
 
 
-private:
+
+        private:
     Graph graph;
 
 
