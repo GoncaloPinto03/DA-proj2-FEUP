@@ -87,6 +87,9 @@
 		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/Heap.h">
 			<Option target="Proj2DA"/>
 		</Unit>
+		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/MutablePriorityQueue.h">
+			<Option target="Proj2DA"/>
+		</Unit>
 		<Unit filename="/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/data_structures/UFDS.h">
 			<Option target="Proj2DA"/>
 		</Unit>

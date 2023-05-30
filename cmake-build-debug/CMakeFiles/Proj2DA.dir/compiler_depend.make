@@ -2240,7 +2240,8 @@ CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
   /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/data_structures/VertexEdge.h \
-  /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/Read_files.h
+  /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/Read_files.h \
+  /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/data_structures/MutablePriorityQueue.h
 
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/Read_files.cpp \
   /Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/src/Read_files.h \
@@ -5133,6 +5134,8 @@ CMakeFiles/Proj2DA.dir/src/main.cpp.o: /Users/goncalopinto/FEUP/2º\ Ano/2º\ Se
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/Availability.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_posix_availability.h:
+
+/Users/goncalopinto/FEUP/2º\ Ano/2º\ Semestre/Desenho\ de\ Algoritmos/Proj2DA/data_structures/MutablePriorityQueue.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/initializer_list:
 

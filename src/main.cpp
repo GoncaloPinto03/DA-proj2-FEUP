@@ -10,8 +10,9 @@
 int main() {
     Read_files readfiles = Read_files();
     Manager manager = Manager();
-    readfiles.read_toygraphs(1);
-    //readfiles.read_extrafully(2);
+    readfiles.read_toygraphs(2);
+    //readfiles.read_realworld(1);
+    //readfiles.read_extrafully(4);
 
     Graph graph = readfiles.get_graph();
     manager.set_graph(graph);

@@ -33,6 +33,7 @@ public:
 
     int getNumVertex() const;
     set<Vertex *, CompareVertex> getVertexSet() const;
+    vector<Vertex *> getVertexSet2() const;
 
 
     Vertex * findVertex(const int &id) const;
@@ -49,7 +50,7 @@ public:
 
 protected:
     int numVertex;
-    //set<Vertex *> vertexSet;
+    vector<Vertex *> vertexSet2;
     set<Vertex*, CompareVertex> vertexSet;
 };
 

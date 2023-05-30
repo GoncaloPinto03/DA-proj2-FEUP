@@ -6,8 +6,10 @@
 #include "Read_files.h"
 #include <iostream>
 #include "vector"
+#include <limits>
 #include "../data_structures/Graph.h"
 #include "../data_structures/VertexEdge.h"
+#include "../data_structures/MutablePriorityQueue.h"
 
 using namespace std;
 
@@ -109,7 +111,54 @@ void Manager::tspBruteforce() {
 }
 
 // 4.2
+ /*
+std::vector<Vertex *> Manager::prim2() {
+    if (graph.getVertexSet2().empty()) {
+        return this->graph.getVertexSet2();
+    }
+
+    // Reset auxiliary info
+    for(auto v : graph.getVertexSet2()) {
+        v->setDist(std::numeric_limits<int>::max());
+        v->setPath(nullptr);
+        v->setVisited(false);
+    }
+
+    // start with an arbitrary vertex
+    Vertex* s = graph.getVertexSet2().front();
+    s->setDist(0);
+
+    // initialize priority queue
+    MutablePriorityQueue<Vertex> q;
+    q.insert(s);
+    // process vertices in the priority queue
+    while( ! q.empty() ) {
+        auto v = q.extractMin();
+        v->setVisited(true);
+        for(auto &e : v->getAdj()) {
+            Vertex* w = e->getDest();
+            if (!w->isVisited()) {
+                auto oldDist = w->getDist();
+                if(e->getWeight() < oldDist) {
+                    w->setDist(e->getWeight());
+                    w->setPath(e);
+                    if (oldDist == std::numeric_limits<int>::max()) {
+                        q.insert(w);
+                    }
+                    else {
+                        q.decreaseKey(w);
+                    }
+                }
+            }
+        }
+    }
+
+    return this->graph.getVertexSet2();
+}
+*/
+
 void Manager::primMST(vector<Edge*>& mst) {
+
     int V = graph.getNumVertex();
 
     // Priority queue to store edges with minimum weight
@@ -136,12 +185,16 @@ void Manager::primMST(vector<Edge*>& mst) {
         Vertex* u = edge->getSource();
         Vertex* v = edge->getDest();
 
-        if (visited[v->getId()])
+        if (visited[v->getId()] && visited[u->getId()])
             continue;
 
         visited[v->getId()] = true;
+        visited[u->getId()] = true;
 
-        mst.push_back(edge);
+        if (edge->getSource()->isVisited() && edge->getDest()->isVisited())
+            continue;
+        else
+            mst.push_back(edge);
 
         for (auto edge : v->getAdj()){
             if(!visited[edge->getDest()->getId()]){
@@ -153,15 +206,33 @@ void Manager::primMST(vector<Edge*>& mst) {
 
 // 4.2
 // Function to perform preorder traversal of MST
-void Manager::preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<bool>& visited,vector<int>& preorder) {
+void Manager::preorderTraversal(const vector<Edge *> &mst, Vertex *node, vector<bool> &visited, vector<int> &preorder) {
     visited[node->getId()] = true;
     cout << node->getId() << " ";
     preorder.push_back(node->getId());
 
+    /*
+    vector<int> aux;
     for (const auto& edge : mst) {
         if (edge->getSource() == node)
+            aux.push_back(edge->getDest()->getId());
+            //preorderTraversal(mst, edge->getDest(), visited,preorder);
+    }
+    double min_cost = std::numeric_limits<int>::max();
+    for (auto i : aux) {
+        auto v = graph.findVertex(i);
+        for (auto e : v->getAdj()) {
+            if (e->getWeight() < min_cost)
+                min_cost = e->getWeight();
+        }
+    }
+     */
+
+    for (const auto& edge : mst) {
+        if (edge->getSource() == node && !visited[edge->getDest()->getId()])
             preorderTraversal(mst, edge->getDest(), visited,preorder);
     }
+
 }
 
 // 4.2
@@ -173,17 +244,32 @@ void Manager::findMinMSTAndPreorderTraversal(vector<int>& preorder) {
     vector<Edge*> mst;
     primMST(mst);
 
-    double total_dist = 0;
-    cout << "Minimum Spanning Tree (MST) connections:" << endl;
-    for (const auto& edge : mst) {
-        cout << edge->getSource()->getId() << " -> " << edge->getDest()->getId() << " Distance: " << edge->getWeight() << endl;
-        total_dist += edge->getWeight();
-    }
-
     cout << "Preorder Traversal of MST (Left to Right): ";
     vector<bool> visited(graph.getNumVertex(), false);
     preorderTraversal(mst, mst[0]->getSource(), visited,preorder);
     cout << endl;
+
+    double total_dist = 0;
+    /*
+    for (const auto& i : preorder) {
+        for (auto e : graph.findVertex(i)->getAdj()) {
+            if (e->getDest()->getId() == preorder[i + 1]) {
+                total_dist += e->getWeight();
+            }
+        }
+    }
+     */
+
+
+    //preorder.push_back(0);
+    for (int i =0 ; i < preorder.size() - 1;i++) {
+        for (auto e : graph.findVertex(i)->getAdj()) {
+            if (e->getDest()->getId() == preorder[i + 1]) {
+                total_dist += e->getWeight();
+            }
+        }
+    }
+
     cout << "Total Distance: "<< total_dist << endl;
     clock_t end = clock();
     cout << "Execution Time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << endl;

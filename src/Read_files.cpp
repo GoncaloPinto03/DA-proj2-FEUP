@@ -98,7 +98,7 @@ void Read_files::read_extrafully(int input) {
     file.close();
 }
 /*
-void read_files::read_realworld(int input) {
+void Read_files::read_realworld(int input) {
     string filename_n;
     string filename_e;
     switch (input) {
@@ -227,9 +227,9 @@ void Read_files::read_toygraphs(int input) {
 
         this->graph.addVertex(node2);
 
-        this->graph.addEdge(node1, node2, weight) ;
+        this->graph.addEdge(node1, node2, weight);
 
-        this->graph.addEdge(node2, node1, weight) ;
+        this->graph.addEdge(node2, node1, weight);
 
     }
     file.close();

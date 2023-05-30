@@ -34,6 +34,7 @@ public:
 
 
     void addAdj(Vertex *v1, Vertex *v2, double w);
+    bool operator<(Vertex & vertex) const;
 
 protected:
     int id;
@@ -44,7 +45,7 @@ protected:
     bool visited = false;
     list<Edge*> adj;
     Edge *path = nullptr;
-    bool operator<(Vertex & vertex) const;
+
 
     void addAdj(Vertex *v1, Vertex *v2, double w) const;
 

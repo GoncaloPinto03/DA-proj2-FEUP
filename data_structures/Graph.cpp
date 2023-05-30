@@ -67,6 +67,10 @@ set<Vertex *, CompareVertex> Graph::getVertexSet() const {
     return vertexSet;
 }
 
+vector<Vertex *> Graph::getVertexSet2() const {
+    return vertexSet2;
+}
+
 Vertex * Graph::findVertex(const int &id) const {
     for (auto v : vertexSet)
         if (v->getId() == id)
