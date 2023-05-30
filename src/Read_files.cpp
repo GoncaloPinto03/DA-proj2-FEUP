@@ -180,9 +180,7 @@ void Read_files::read_toygraphs(int input) {
     getline(file,line);
     if (input == 3){
         while(getline(file,line)){
-            if (!line.empty() && line[line.length() - 1] == '\r') {
-                line.erase(line.length() - 1);
-            }
+
             stringstream ss(line);
             string t;
             vector<string>aux;
@@ -197,10 +195,16 @@ void Read_files::read_toygraphs(int input) {
             string name1= aux[3];
             string name2= aux[4];
             this->graph.addVertex(node_1, name1);
-            this->graph.addVertex(node_2, name2) ;
+            this->graph.addVertex(node_2, name2);
             this->graph.addEdge(node_1, node_2, w);
-            //cout << this->graph.addEdge(node_2, node_1, w) << endl;
+            this->graph.addEdge(node_2, node_1, w);
+
+
+
             //cout << node_1 << ' '<< node_2 << ' '<<w <<' ' << name1<<' ' << name2 << endl;
+
+
+
 
 
 

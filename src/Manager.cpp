@@ -32,17 +32,16 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
     bool vi=false;
     double costt=0;
     if (num_visited == graph.getNumVertex()) {
-        // refactor later (use dijkstra to find minimum between current and start[findVertex(0)])
-        // for real world graphs use latitude and logitude for distance instead of dijkstra
+
         for(Edge* e: current->getAdj()){
             Vertex* w = e->getDest();
             if(w==graph.findVertex(0)){
-                costt = costt + current->getPath()->getWeight();
-                costt  += current->getPath()->getWeight();
+                costt = e->getWeight();
                 vi=true;
             }
 
         }
+
         if(vi==false) return;
 
         double cost = current_cost + costt;
@@ -55,7 +54,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
                 tsp_path.push_back(e->getSource());
             }
 
-            std::reverse(tsp_path.begin(), tsp_path.end()-1);
+            std::reverse(tsp_path.begin(), tsp_path.end());
 
 
         }
@@ -63,7 +62,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
         return;
 
     }
-    for (Edge* e: current->getAdj()) { // may need refactor
+    for (Edge* e: current->getAdj()) {
         Vertex* w = e->getDest();
         if (!w->isVisited()) {
             w->setVisited(true);
@@ -139,14 +138,7 @@ double Manager::tspBF_aux(std::vector<Vertex *>& best_tsp_path) {
 
 
 
-/*
-int Graph::getNumVertex() const {
-    return this->vertexSet.size();
-}
 
-std::vector<Vertex *> Graph::getVertexSet() const {
-    return this->vertexSet;
-}*/
 
 
 
