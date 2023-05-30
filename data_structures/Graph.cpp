@@ -136,3 +136,63 @@ Edge * Graph::findEdge(const Vertex &source, const Vertex &dest) {
     }
     return nullptr;
 }
+
+void Graph::tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *> &tsp_path) {
+    if (num_visited == getNumVertex()) {
+        double cost = current_cost;
+        bool hasEdge = false;
+        for (Edge* e: current->getAdj()) {
+            if (e->getDest()->getId() == 0) {
+                hasEdge = true;
+                cost += e->getWeight();
+                break;
+            }
+        }
+
+        if (!hasEdge) {
+            dijkstra(current);
+            cost += findVertex(0)->getDist(); // use dijkstra to get the distance between current and 0
+            // for real world graph use latitude and longitude (maybe haversine algorithm)
+        }
+
+        if (cost < min_cost) {
+            min_cost = cost;
+            tsp_path.clear();
+            tsp_path.push_back(current);
+            //? id may not be needed
+            for (Edge* e = current->getPath(); e->getSource()->getId() != findVertex(0)->getId(); e = e->getSource()->getPath()) {
+                tsp_path.push_back(e->getSource());
+            }
+
+            std::reverse(tsp_path.begin(), tsp_path.end());
+        }
+        return;
+    }
+
+    for (Edge* e: current->getAdj()) { // may need refactor
+        Vertex* w = e->getDest();
+        if (!w->isVisited()) {
+            w->setVisited(true);
+            w->setPath(e);
+            tspBacktrackBruteforce(w, current_cost + e->getWeight(), num_visited + 1, min_cost, tsp_path);
+            w->setVisited(false);
+            w->setPath(nullptr);
+        }
+    }
+}
+
+double Graph::tspBruteforce(std::vector<Vertex *> &tsp_path) {
+    for (auto& v: vertexSet) {
+        v->setVisited(false);
+        v->setPath(nullptr);
+    }
+
+    double min_cost = std::numeric_limits<double>::max();
+
+    auto init = findVertex(0);
+    init->setVisited(true);
+    tspBacktrackBruteforce(init, 0, 1, min_cost, tsp_path);
+
+    return min_cost;
+}
+

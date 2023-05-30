@@ -43,10 +43,16 @@ public:
 
     void dijkstra(Vertex* source);
 
+    double tspBruteforce(vector<Vertex *> &tsp_path);
+
 protected:
     int numVertex;
     //set<Vertex *> vertexSet;
     set<Vertex*, CompararVertex> vertexSet;
+
+    void tspBacktrackBruteforce(Vertex *current, double current_cost, int num_visited, double &min_cost,
+                                vector<Vertex *> &tsp_path);
+
 };
 
 #endif
