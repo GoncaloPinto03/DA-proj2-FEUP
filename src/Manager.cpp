@@ -61,6 +61,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
 
         return;
 
+
     }
     for (Edge* e: current->getAdj()) {
         Vertex* w = e->getDest();
@@ -87,6 +88,7 @@ std::vector<Vertex *> Manager::tspBruteforce() {
     auto init = graph.findVertex(0);
     init->setVisited(true);
     tspBacktrackBruteforce(init, 0, 1, min_cost, tsp_path);
+    cout<<min_cost<<endl;
     return tsp_path;
 }
 

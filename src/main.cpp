@@ -9,7 +9,7 @@
 int main() {
     Read_files readfiles = Read_files();
     Manager manager = Manager();
-    readfiles.read_toygraphs(3);
+    readfiles.read_toygraphs(2);
     //readfiles.read_extrafully(2);
 
     Graph graph = readfiles.get_graph();
