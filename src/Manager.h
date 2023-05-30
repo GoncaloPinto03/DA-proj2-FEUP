@@ -23,7 +23,6 @@ public:
     std::vector<Vertex *> tspBruteforce();
 
     // 4.2
-    double triangularApprox();
     void primMST(vector<Edge*>& mst);
     void preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<bool>& visited,vector<int>& preorder);
     void findMinMSTAndPreorderTraversal(vector<int>& preorder);

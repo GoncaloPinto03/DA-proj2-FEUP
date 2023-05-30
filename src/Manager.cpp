@@ -144,6 +144,7 @@ void Manager::primMST(vector<Edge*>& mst) {
     }
 }
 
+// 4.2
 // Function to perform preorder traversal of MST
 void Manager::preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<bool>& visited,vector<int>& preorder) {
     visited[node->getId()] = true;
@@ -156,6 +157,7 @@ void Manager::preorderTraversal(const vector<Edge*>& mst, Vertex* node, vector<b
     }
 }
 
+// 4.2
 // Function to find the minimum spanning tree and perform preorder traversal
 void Manager::findMinMSTAndPreorderTraversal(vector<int>& preorder) {
     vector<Edge*> mst;
