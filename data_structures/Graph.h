@@ -15,10 +15,12 @@ struct CompareVertex
 {
     bool operator()(const Vertex* lhs, const Vertex* rhs) const  { return lhs->getId() < rhs->getId(); }
 };
+
 struct CompareWeight
 {
     bool operator()(const Edge* lhs, const Edge* rhs) const  { return lhs->getWeight() < rhs->getWeight(); }
 };
+
 class Graph {
 public:
     Graph();
@@ -41,17 +43,26 @@ public:
 
     Edge * findEdge(const Vertex &source, const Vertex &dest);
 
+    vector<Vertex *> getVertexes();
+    void setVertexes (vector<Vertex *> vertexes);
+
+
     void resetVisited();
     void resetDist();
     void resetPath();
 
     void dijkstra(Vertex* source);
+    vector<Vertex *> vertexes;
 
 
 protected:
     int numVertex;
     vector<Vertex *> vertexSet2;
     set<Vertex*, CompareVertex> vertexSet;
+
+
+
+    vector<Edge *> edges;
 };
 
 #endif

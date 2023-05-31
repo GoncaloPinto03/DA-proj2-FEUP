@@ -35,7 +35,7 @@ int Vertex::getId() const {
 string Vertex::getName() const {
     return this->name;
 }
-int Vertex::getDist() const {
+double Vertex::getDist() const {
     return this->dist;
 }
 double Vertex::getLatitude() const {
@@ -66,8 +66,8 @@ void Vertex::setId(int id) {
 void Vertex::setName(string name) {
     this->name = name;
 }
-void Vertex::setDist(int dist) {
-    this->dist = dist;
+void Vertex::setDist(double dist2) {
+    this->dist = dist2;
 }
 void Vertex::setLatitude(double lat) {
     this->latitude = lat;

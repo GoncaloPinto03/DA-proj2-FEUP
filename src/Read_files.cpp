@@ -97,65 +97,73 @@ void Read_files::read_extrafully(int input) {
     }
     file.close();
 }
-/*
+
 void Read_files::read_realworld(int input) {
-    string filename_n;
-    string filename_e;
+    string filename_edges;
+    string filename_nodes;
     switch (input) {
         case 1:
-            filename_e = "dataset/Real-world Graphs/graph1/edges.csv";
-            filename_n = "dataset/Real-world Graphs/graph1/nodes.csv";
+            filename_edges = "../dataset/Real-world Graphs/graph1/edges.csv";
+            filename_nodes = "../dataset/Real-world Graphs/graph1/nodes.csv";
             break;
         case 2:
-            filename_e = "dataset/Real-world Graphs/graph2/edges.csv";
-            filename_n = "dataset/Real-world Graphs/graph2/nodes.csv";
+            filename_edges = "../dataset/Real-world Graphs/graph2/edges.csv";
+            filename_nodes = "../dataset/Real-world Graphs/graph2/nodes.csv";
             break;
         case 3:
-            filename_e = "dataset/Real-world Graphs/graph3/edges.csv";
-            filename_n = "dataset/Real-world Graphs/graph3/nodes.csv";
+            cout << "Here\n";
+            filename_edges = "../dataset/Real-world Graphs/graph3/edges.csv";
+            filename_nodes = "../dataset/Real-world Graphs/graph3/nodes.csv";
             break;
         default:
             cout << "Invalid input" << endl;
             return;
     }
-    ifstream file_nodes(filename_n);
-    string line_n;
-    int i = 0;
-    getline(file_nodes, line_n);
-    while (getline(file_nodes,line_n)){
-        stringstream ss(line_n);
-        string t;
-        vector<string> aux;
-        while (getline(ss, t, ',')) {
-            aux.push_back(t);
-        }
-        int node = stoi(aux[0]);
-        double lat = stod(aux[2]);
-        double lon = stod(aux[1]);
-        cout << node << " " << lat << " " << lon << endl;
-        this->graph.addVertex(node, lat, lon);
+
+    ifstream file_nodes(filename_nodes);
+    string line_nodes;
+
+    getline(file_nodes, line_nodes);
+    while (getline(file_nodes, line_nodes)) {
+        stringstream ss(line_nodes);
+
+        string nodeId, lon, lat;
+        getline(ss, nodeId, ',');
+        getline(ss, lon, ',');
+        getline(ss, lat, '\0');
+
+        int id1 = stoi(nodeId);
+        double lat2 = stod(lat);
+        double lon2 = stod(lon);
+        this->graph.addVertex(id1, lon2, lat2);
+        // cout << id1 << ' ' << lat2 << ' ' << lon2 << endl;
     }
 
-    ifstream file_edges(filename_e);
-    string line_e;
-    int j = 0;
-    getline(file_edges, line_e);
-    while (getline(file_edges,line_e)){
-        stringstream ss(line_e);
-        string t;
-        vector<string> aux;
-        while (getline(ss, t, ',')) {
-            aux.push_back(t);
-        }
-        int node_1 = stoi(aux[0]);
-        int node_2= stod(aux[1]);
-        double w = stod(aux[2]);
-        this->graph.addEdge(node_1, node_2, w);
+    ifstream file_edges(filename_edges);
+    string line_edges;
+
+    getline(file_edges, line_edges);
+    while (getline(file_edges, line_edges)) {
+        stringstream ss(line_edges);
+
+        string node1;
+        string node2;
+        string weight;
+        getline(ss, node1, ',');
+        getline(ss, node2, ',');
+        getline(ss, weight, '\0');
+
+        int node1_ = stoi(node1);
+        int node2_ = stoi(node2);
+        double weight_ = stod(weight);
+        this->graph.addEdge(node1_, node2_, weight_);
+        cout << "origem: " << node1_ << ' ' << "destino: " << node2_ << ' ' << "distance: " << weight_ << endl;
     }
+
     file_nodes.close();
     file_edges.close();
+
 }
-*/
 
 void Read_files::read_toygraphs(int input) {
     string filename;
@@ -192,22 +200,14 @@ void Read_files::read_toygraphs(int input) {
             int node_1 = stoi(aux[0]);
             int node_2 = stoi(aux[1]);
             double w = stod (aux[2]);
-            string name1= aux[3];
-            string name2= aux[4];
+            string name1 = aux[3];
+            string name2 = aux[4];
             this->graph.addVertex(node_1, name1);
             this->graph.addVertex(node_2, name2);
             this->graph.addEdge(node_1, node_2, w);
             this->graph.addEdge(node_2, node_1, w);
 
-
-
             //cout << node_1 << ' '<< node_2 << ' '<<w <<' ' << name1<<' ' << name2 << endl;
-
-
-
-
-
-
 
         }
 
@@ -233,6 +233,7 @@ void Read_files::read_toygraphs(int input) {
 
     }
     file.close();
+
 }
 
 

@@ -20,18 +20,11 @@ bool Graph::addVertex(const int &id) {
     vertexSet.insert(v1);
     return true;
 }
+
 bool Graph::addVertex(const int &id, double longitude, double latitude) {
     if (findVertex(id) != nullptr)
         return false;
     auto *v1 = new Vertex(id, longitude, latitude);
-    vertexSet.insert(v1);
-    return true;
-}
-
-bool Graph::addVertex(const int &id, string name) {
-    if (findVertex(id) != nullptr)
-        return false;
-    auto *v1 = new Vertex(id, std::move(name));
     vertexSet.insert(v1);
     return true;
 }
@@ -44,6 +37,14 @@ bool Graph::addEdge(const int &sourc, const int &dest, double w) const {
 
     //v1->getAdj().insert(v2->getAdj().end(), new Edge(v1, v2, w));
     v1->addAdj(v1,v2,w);
+    return true;
+}
+
+bool Graph::addVertex(const int &id, string name) {
+    if (findVertex(id) != nullptr)
+        return false;
+    auto *v1 = new Vertex(id, std::move(name));
+    vertexSet.insert(v1);
     return true;
 }
 
