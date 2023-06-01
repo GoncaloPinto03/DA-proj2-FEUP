@@ -129,53 +129,125 @@ Proj2DA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/build
 .PHONY : Proj2DA/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+data_structures/Graph.o: data_structures/Graph.cpp.o
+.PHONY : data_structures/Graph.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/main.cpp.o
-.PHONY : main.cpp.o
+data_structures/Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.o
+.PHONY : data_structures/Graph.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+data_structures/Graph.i: data_structures/Graph.cpp.i
+.PHONY : data_structures/Graph.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/main.cpp.i
-.PHONY : main.cpp.i
+data_structures/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.i
+.PHONY : data_structures/Graph.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+data_structures/Graph.s: data_structures/Graph.cpp.s
+.PHONY : data_structures/Graph.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/main.cpp.s
-.PHONY : main.cpp.s
+data_structures/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/Graph.cpp.s
+.PHONY : data_structures/Graph.cpp.s
 
-src/auxiliar.o: src/auxiliar.cpp.o
-.PHONY : src/auxiliar.o
+data_structures/VertexEdge.o: data_structures/VertexEdge.cpp.o
+.PHONY : data_structures/VertexEdge.o
 
 # target to build an object file
-src/auxiliar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o
-.PHONY : src/auxiliar.cpp.o
+data_structures/VertexEdge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.o
+.PHONY : data_structures/VertexEdge.cpp.o
 
-src/auxiliar.i: src/auxiliar.cpp.i
-.PHONY : src/auxiliar.i
+data_structures/VertexEdge.i: data_structures/VertexEdge.cpp.i
+.PHONY : data_structures/VertexEdge.i
 
 # target to preprocess a source file
-src/auxiliar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i
-.PHONY : src/auxiliar.cpp.i
+data_structures/VertexEdge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.i
+.PHONY : data_structures/VertexEdge.cpp.i
 
-src/auxiliar.s: src/auxiliar.cpp.s
-.PHONY : src/auxiliar.s
+data_structures/VertexEdge.s: data_structures/VertexEdge.cpp.s
+.PHONY : data_structures/VertexEdge.s
 
 # target to generate assembly for a file
-src/auxiliar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s
-.PHONY : src/auxiliar.cpp.s
+data_structures/VertexEdge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/data_structures/VertexEdge.cpp.s
+.PHONY : data_structures/VertexEdge.cpp.s
+
+src/Manager.o: src/Manager.cpp.o
+.PHONY : src/Manager.o
+
+# target to build an object file
+src/Manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.o
+.PHONY : src/Manager.cpp.o
+
+src/Manager.i: src/Manager.cpp.i
+.PHONY : src/Manager.i
+
+# target to preprocess a source file
+src/Manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.i
+.PHONY : src/Manager.cpp.i
+
+src/Manager.s: src/Manager.cpp.s
+.PHONY : src/Manager.s
+
+# target to generate assembly for a file
+src/Manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Manager.cpp.s
+.PHONY : src/Manager.cpp.s
+
+src/Read_files.o: src/Read_files.cpp.o
+.PHONY : src/Read_files.o
+
+# target to build an object file
+src/Read_files.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o
+.PHONY : src/Read_files.cpp.o
+
+src/Read_files.i: src/Read_files.cpp.i
+.PHONY : src/Read_files.i
+
+# target to preprocess a source file
+src/Read_files.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.i
+.PHONY : src/Read_files.cpp.i
+
+src/Read_files.s: src/Read_files.cpp.s
+.PHONY : src/Read_files.s
+
+# target to generate assembly for a file
+src/Read_files.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.s
+.PHONY : src/Read_files.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 src/menu.o: src/menu.cpp.o
 .PHONY : src/menu.o
@@ -210,12 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Proj2DA"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... src/auxiliar.o"
-	@echo "... src/auxiliar.i"
-	@echo "... src/auxiliar.s"
+	@echo "... data_structures/Graph.o"
+	@echo "... data_structures/Graph.i"
+	@echo "... data_structures/Graph.s"
+	@echo "... data_structures/VertexEdge.o"
+	@echo "... data_structures/VertexEdge.i"
+	@echo "... data_structures/VertexEdge.s"
+	@echo "... src/Manager.o"
+	@echo "... src/Manager.i"
+	@echo "... src/Manager.s"
+	@echo "... src/Read_files.o"
+	@echo "... src/Read_files.i"
+	@echo "... src/Read_files.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... src/menu.o"
 	@echo "... src/menu.i"
 	@echo "... src/menu.s"

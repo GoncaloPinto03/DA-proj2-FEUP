@@ -1,92 +1,76 @@
-// By: Gonçalo Leão
-
-#ifndef DA_TP_CLASSES_VERTEX_EDGE
-#define DA_TP_CLASSES_VERTEX_EDGE
+#ifndef UNTITLED1_VERTEXEDGE_H
+#define UNTITLED1_VERTEXEDGE_H
 
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <limits>
-#include <algorithm>
-#include "../data_structures/MutablePriorityQueue.h"
+#include <list>
+
+using namespace std;
 
 class Edge;
 
-#define INF std::numeric_limits<double>::max()
-
-/************************* Vertex  **************************/
-
-class Vertex {
+class Vertex{
 public:
+    Vertex();
     Vertex(int id);
-    bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
+    Vertex(int id, double longitude, double latitude);
+    Vertex(int id, string name);
 
     int getId() const;
-    std::vector<Edge *> getAdj() const;
-    bool isVisited() const;
-    bool isProcessing() const;
-    unsigned int getIndegree() const;
+    string getName() const;
     double getDist() const;
-    Edge *getPath() const;
-    std::vector<Edge *> getIncoming() const;
-
-    void setId(int info);
+    double getLatitude() const;
+    double getLongitude() const;
+    bool isVisited() const;
+    Edge* getPath() const;
+    vector<Edge*> getAdj() const ;
+    void setId(int id);
+    void setName(string name);
+    void setDist(double dist2);
+    void setLatitude(double lat);
+    void setLongitude(double lon);
     void setVisited(bool visited);
-    void setProcesssing(bool processing);
-    void setIndegree(unsigned int indegree);
-    void setDist(double dist);
     void setPath(Edge *path);
-    Edge * addEdge(Vertex *dest, double w);
-    bool removeEdge(int destID);
-    void removeOutgoingEdges();
+    void addEdge(Vertex *dest, double weight);
 
-    friend class MutablePriorityQueue<Vertex>;
+
+    void addAdj(Vertex *v1, Vertex *v2, double w);
+    bool operator<(Vertex & vertex) const;
+
 protected:
-    int id;                // identifier
-    std::vector<Edge *> adj;  // outgoing edges
-
-    // auxiliary fields
-    bool visited = false; // used by DFS, BFS, Prim ...
-    bool processing = false; // used by isDAG (in addition to the visited attribute)
-    unsigned int indegree; // used by topsort
+    int id;
+    string name;
     double dist = 0;
+    double longitude = 0.0;
+    double latitude = 0.0;
+    bool visited = false;
+    vector<Edge*> adj;
     Edge *path = nullptr;
 
-    std::vector<Edge *> incoming; // incoming edges
 
-    int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
+    void addAdj(Vertex *v1, Vertex *v2, double w) const;
 
-    void deleteEdge(Edge *edge);
 };
-
-/********************** Edge  ****************************/
 
 class Edge {
 public:
-    Edge(Vertex *orig, Vertex *dest, double w);
+    Edge();
+    Edge(Vertex* source, Vertex* dest);
+    Edge(Vertex* source, Vertex* dest, double weight);
 
-    Vertex * getDest() const;
+    Vertex* getDest() const;
+    Vertex* getSource() const;
     double getWeight() const;
-    bool isSelected() const;
-    Vertex * getOrig() const;
-    Edge *getReverse() const;
-    double getFlow() const;
+    void setDest(Vertex* dest);
+    void setSource(Vertex* source);
+    void setWeight(double weight);
+private:
+    Vertex* source;
+    Vertex* dest;
+    double weight;
 
-    void setSelected(bool selected);
-    void setReverse(Edge *reverse);
-    void setFlow(double flow);
-protected:
-    Vertex * dest; // destination vertex
-    double weight; // edge weight, can also be used for capacity
 
-    // auxiliary fields
-    bool selected = false;
-
-    // used for bidirectional edges
-    Vertex *orig;
-    Edge *reverse = nullptr;
-
-    double flow; // for flow-related problems
 };
 
-#endif /* DA_TP_CLASSES_VERTEX_EDGE */
+
+#endif //UNTITLED1_VERTEXEDGE_H

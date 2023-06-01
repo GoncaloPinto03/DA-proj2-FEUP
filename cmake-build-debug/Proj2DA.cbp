@@ -82,13 +82,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/main.cpp">
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Graph.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp">
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Graph.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.h">
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Heap.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/MutablePriorityQueue.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/UFDS.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/VertexEdge.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/VertexEdge.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Read_files.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Read_files.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/main.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
 		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp">

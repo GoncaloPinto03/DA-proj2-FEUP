@@ -2,11 +2,7 @@
 #include "menu.h"
 #include "auxiliar.h"
 #include "Manager.h"
-#include "../data_structures/Graph.h"
-#include "../data_structures/Heap.h"
-#include "../data_structures/MutablePriorityQueue.h"
-#include "../data_structures/UFDS.h"
-#include "../data_structures/VertexEdge.h"
+#include "Read_files.h"
 using namespace std;
 
 void Menu::mainMenu() {
@@ -31,91 +27,94 @@ void Menu::mainMenu() {
     }
 }
 
-bool Menu::nextState(vector<Network> &networks, vector<Station> &stations) {
+bool Menu::nextState(int key) {
+    Read_files readfiles = Read_files();
     clearSCR();
+
     std::string option;
     switch (state) {
         case 0:
             mainMenu();
             return true;
         case 1:
-            first(networks, stations);
+            firstOption();
+            return true;
+        case 2:
+            secondOption();
+            return true;
+        case 3:
+            state = 5;
+            return true;
+        case 4:
+            second();
+            state = 5;
+            return true;
+        default:
+            return false;
+    }
+}
+
+void Menu::firstOption() {
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    title("Choose the number of the file you wish to run (1-3).");
+    showMenu(firstOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    readfiles.read_toygraphs(key);
+
+    manager.tspBruteforce();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
+}
+
+bool Menu::secondOption() {
+    Read_files readfiles = Read_files();
+    title("Choose the folder of files you wish to test:");
+    showMenu(secondOptions);
+
+    int key = getInt("Choose an option");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    switch (key) {
+        case 1:
+            readfiles.read_extrafully(key);
             state = 4;
             return true;
         case 2:
-            second(networks, stations);
+            readfiles.read_realworld(key);
             state = 4;
             return true;
         case 3:
-            third(networks, stations);
+            readfiles.read_toygraphs(key);
             state = 4;
             return true;
         default:
             return false;
-    }}
-
-void Menu::first(vector<Network> &networks, vector<Station> &stations) {
-    Manager manager = Manager();
-    manager.read_stations(stations);
-    manager.read_networks(networks);
-
-    Graph graph = manager.graph;
-
-    for (auto v : manager.graph.getVertexSet()) {
-        double cap = 0;
-        for (auto e : v->getAdj()) {
-            cap += e->getWeight();
-        }
-        v->setCapacity(cap);
     }
-
-    manager.maxTrainBetweenStations(manager.graph);
-
-    cout << "Thanks for using our program!" << endl;
-    cout << "Click Enter!";
-    cin.ignore(numeric_limits<streamsize>::max(),'\n');
-    cin.get();
 }
 
-void Menu::second(vector<Network> &networks, vector<Station> &stations) {
+void Menu::second() {
+    Read_files readfiles = Read_files();
     Manager manager = Manager();
-    manager.read_stations(stations);
-    manager.read_networks(networks);
 
-    Graph graph = manager.graph;
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
 
-    for (auto v : manager.graph.getVertexSet()) {
-        double cap = 0;
-        for (auto e : v->getAdj()) {
-            cap += e->getWeight();
-        }
-        v->setCapacity(cap);
-    }
-
-    manager.maxTrainBetweenStationsPairs();
-
-    cout << "Thanks for using our program!" << endl;
-    cout << "Click Enter!";
-    cin.ignore(numeric_limits<streamsize>::max(),'\n');
-    cin.get();
-}
-
-void Menu::third(vector<Network> &networks, vector<Station> &stations) {
-    Manager manager = Manager();
-    manager.read_stations(stations);
-    manager.read_networks(networks);
-
-    Graph graph = manager.graph;
-
-    for (auto v : manager.graph.getVertexSet()) {
-        double cap = 0;
-        for (auto e: v->getAdj()) {
-            cap += e->getWeight();
-        }
-        v->setCapacity(cap);
-    }
-
-    manager.managementByMunicipalities();
+    manager.triangular();
 
     cout << "Thanks for using our program!" << endl;
     cout << "Click Enter!";

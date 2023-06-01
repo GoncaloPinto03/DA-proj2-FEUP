@@ -8,8 +8,6 @@
 
 #include "vector"
 #include "string"
-#include "Network.h"
-#include "Station.h"
 #include "Manager.h"
 
 using namespace std;
@@ -20,32 +18,32 @@ using namespace std;
 class Menu {
 private:
     vector<string> menuOptions = {"Backtracking Algorithm", "Triangular Approximation Heuristic", "Other Heuristics", "Exit"}; /**< An array containing the main menu options */
+    vector<string> firstOptions = {"Shipping(1), Stadiums(2), Tourism(3)"}; /**< An array containing the file options for the 4.1 exercise */
+    vector<string> secondOptions = {"Extra Fully Connected Graphs, Real World Graphs, Toy Graphs"};
 
     int state = 0; /**< An integer representing the current state of the menu */
-     /**
-     * @brief Displays the main menu
-     */
+    /**
+    * @brief Displays the main menu
+    */
     void mainMenu();
+    /**
+    * @brief Displays the second option menu
+    */
+    void firstOption();
     /**
      * @brief Runs the first scenario
      * @param packages A vector of Network objects representing the network of the train system
      * @param stations A vector of Station objects representing the stations of the train system
      */
-    void first(vector<Network>& packages, vector<Station>& stations);
+    bool secondOption();
     /**
      * @brief Runs the second scenario
      * @param packages A vector of Network objects representing the network of the train system
      * @param stations A vector of Station objects representing the stations of the train system
      */
-    void second(vector<Network>& packages, vector<Station>& stations);
+    void second();
     /**
     * @brief Runs the second scenario
-    * @param packages A vector of Network objects representing the network of the train system
-    * @param stations A vector of Station objects representing the stations of the train system
-    */
-    void third(vector<Network>& packages, vector<Station>& stations);
-    /**
-    * @brief Runs the third scenario
     * @param packages A vector of Network objects representing the network of the train system
     * @param stations A vector of Station objects representing the stations of the train system
     */
@@ -57,7 +55,7 @@ public:
      * @param stations A vector of Station objects representing the stations of the train system
      * @return A boolean value indicating whether the program should continue running or not
      */
-    bool nextState(vector<Network>& packages, vector<Station>& stations);
+    bool nextState(int key);
 };
 
 #endif //PROJ2_MENU_H
