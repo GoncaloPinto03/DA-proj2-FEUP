@@ -8,16 +8,12 @@
 
 
 int main() {
+
     Read_files readfiles = Read_files();
     Manager manager = Manager();
-    //readfiles.read_toygraphs(2);
 
-    clock_t start = ::clock();
-    readfiles.read_realworld(2);
-    clock_t end = ::clock();
-
-    cout << (double)(end-start)/CLOCKS_PER_SEC << endl;
-
+    readfiles.read_extrafully(12);
+    //eadfiles.read_realworld(3);
 
 
     Graph graph = readfiles.get_graph();
@@ -27,9 +23,7 @@ int main() {
     //manager.tspBruteforce();
 
     // 4.2
-    vector<int> preorder;
-    //manager.findMinMSTAndPreorderTraversal(preorder);
-    //manager.TSP_TriangularApproximation(&graph);
+    manager.triangular();
 
 
 

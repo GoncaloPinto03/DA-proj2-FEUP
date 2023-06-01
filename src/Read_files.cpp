@@ -111,7 +111,6 @@ void Read_files::read_realworld(int input) {
             filename_nodes = "../dataset/Real-world Graphs/graph2/nodes.csv";
             break;
         case 3:
-            cout << "Here\n";
             filename_edges = "../dataset/Real-world Graphs/graph3/edges.csv";
             filename_nodes = "../dataset/Real-world Graphs/graph3/nodes.csv";
             break;

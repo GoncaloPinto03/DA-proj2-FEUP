@@ -50,7 +50,7 @@ bool Vertex::isVisited() const {
 Edge* Vertex::getPath() const {
     return this->path;
 }
-list<Edge*> Vertex::getAdj() const {
+vector<Edge*> Vertex::getAdj() const {
     return this->adj;
 }
 
@@ -113,4 +113,9 @@ void Edge::setSource(Vertex* source) {
 }
 void Edge::setWeight(double weight) {
     this->weight = weight;
+}
+
+void Vertex::addEdge(Vertex *dest, double weight) {
+    auto newEdge = new Edge(this, dest, weight);
+    this->adj.push_back(newEdge);
 }
