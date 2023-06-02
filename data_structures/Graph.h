@@ -12,10 +12,7 @@
 #include "VertexEdge.h"
 using namespace std;
 
-struct CompareVertex
-{
-    bool operator()(const Vertex* lhs, const Vertex* rhs) const  { return lhs->getId() < rhs->getId(); }
-};
+
 
 struct CompareWeight
 {
@@ -35,7 +32,7 @@ public:
     bool removeVertex(const int &id);
 
     int getNumVertex() const;
-    unordered_map<int, Vertex*> getVertexSet() const;
+    const unordered_map<int, Vertex*> getVertexSet() const;
     vector<Vertex *> getVertexSet2() const;
 
 

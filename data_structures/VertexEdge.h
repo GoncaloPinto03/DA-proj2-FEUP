@@ -58,6 +58,8 @@ public:
     Edge(Vertex* source, Vertex* dest);
     Edge(Vertex* source, Vertex* dest, double weight);
 
+    Edge(Vertex *dest, double weight);
+
     Vertex* getDest() const;
     Vertex* getSource() const;
     double getWeight() const;

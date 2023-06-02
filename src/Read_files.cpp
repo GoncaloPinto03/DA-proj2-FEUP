@@ -19,55 +19,53 @@ Read_files::Read_files(){
     this->graph=Graph();
 }
 
-Read_files::Read_files(int input) {
-    read_extrafully(input);
-}
-
 Graph Read_files::get_graph() {
     return this->graph;
 }
 
+
+
 void Read_files::read_extrafully(int input) {
     string filename;
-    switch (input) {
+    switch(input){
         case 1:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_25.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_25.csv";
             break;
         case 2:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_50.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_50.csv";
             break;
         case 3:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_75.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_75.csv";
             break;
         case 4:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_100.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_100.csv";
             break;
         case 5:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_200.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_200.csv";
             break;
         case 6:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_300.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_300.csv";
             break;
         case 7:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_400.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_400.csv";
             break;
         case 8:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_500.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_500.csv";
             break;
         case 9:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_600.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_600.csv";
             break;
         case 10:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_700.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_700.csv";
             break;
         case 11:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_800.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_800.csv";
             break;
         case 12:
-            filename="../dataset/Extra_Fully_Connected_Graphs/edges_900.csv";
+            filename = "../dataset/Extra_Fully_Connected_Graphs/edges_900.csv";
             break;
         default:
-            cout<<"Invalid input";
+            cout << "Invalid input" << endl;
             return;
     }
     ifstream file(filename);
@@ -83,7 +81,7 @@ void Read_files::read_extrafully(int input) {
 
         int node_1= stoi(aux[0]);
         int node_2= stoi(aux[1]);
-        int w=stoi(aux[2]);
+        double w=stod(aux[2]);
         this->graph.addVertex(node_1);
         this->graph.addVertex(node_2);
         this->graph.addEdge(node_1,node_2, w);
@@ -129,13 +127,12 @@ void Read_files::read_realworld(int input) {
         double lat2 = stod(lat);
         double lon2 = stod(lon);
         this->graph.addVertex(id1, lon2, lat2);
-        // cout << id1 << ' ' << lat2 << ' ' << lon2 << endl;
     }
 
     ifstream file_edges(filename_edges);
     string line_edges;
 
-    getline(file_edges, line_edges);
+    getline(file_edges,line_edges);
     while (getline(file_edges, line_edges)) {
         stringstream ss(line_edges);
 
@@ -151,7 +148,6 @@ void Read_files::read_realworld(int input) {
         double weight_ = stod(weight);
         this->graph.addEdge(node1_, node2_, weight_);
         this->graph.addEdge(node2_, node1_, weight_);
-        //cout << "origem: " << node1_ << ' ' << "destino: " << node2_ << ' ' << "distance: " << weight_ << endl;
     }
 
     file_nodes.close();
