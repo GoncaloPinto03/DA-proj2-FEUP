@@ -63,12 +63,6 @@ bool Menu::nextState(int key) {
 }
 
 void Menu::firstOption() {
-    Read_files readfiles = Read_files();
-    Manager manager = Manager();
-
-    Graph graph = readfiles.get_graph();
-    manager.set_graph(graph);
-
     title("Choose the number of the file you wish to run.");
     showMenu(firstOptions);
 
@@ -77,7 +71,13 @@ void Menu::firstOption() {
         key = getInt("Not a valid option. Choose a valid option.");
     }
 
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
     readfiles.read_toygraphs(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
 
     manager.tspBruteforce();
 
@@ -88,7 +88,6 @@ void Menu::firstOption() {
 }
 
 bool Menu::secondOption() {
-    Read_files readfiles = Read_files();
     title("Choose the folder of files you wish to test:");
     showMenu(secondOptions);
 
@@ -113,12 +112,6 @@ bool Menu::secondOption() {
 }
 
 void Menu::first() {
-    Read_files readfiles = Read_files();
-    Manager manager = Manager();
-
-    Graph graph = readfiles.get_graph();
-    manager.set_graph(graph);
-
     title("Choose the number of the file you wish to run.");
     showMenu(thirdOptions);
 
@@ -127,7 +120,13 @@ void Menu::first() {
         key = getInt("Not a valid option. Choose a valid option.");
     }
 
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
     readfiles.read_extrafully(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
 
     manager.triangular();
 
@@ -138,12 +137,6 @@ void Menu::first() {
 }
 
 void Menu::second() {
-    Read_files readfiles = Read_files();
-    Manager manager = Manager();
-
-    Graph graph = readfiles.get_graph();
-    manager.set_graph(graph);
-
     title("Choose the graph you wish to run.");
     showMenu(fourthOptions);
 
@@ -152,7 +145,13 @@ void Menu::second() {
         key = getInt("Not a valid option. Choose a valid option.");
     }
 
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
     readfiles.read_realworld(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
 
     manager.triangular();
 
@@ -163,12 +162,6 @@ void Menu::second() {
 }
 
 void Menu::third() {
-    Read_files readfiles = Read_files();
-    Manager manager = Manager();
-
-    Graph graph = readfiles.get_graph();
-    manager.set_graph(graph);
-
     title("Choose the number of the file you wish to run.");
     showMenu(firstOptions);
 
@@ -177,7 +170,13 @@ void Menu::third() {
         key = getInt("Not a valid option. Choose a valid option.");
     }
 
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
     readfiles.read_toygraphs(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
 
     manager.triangular();
 

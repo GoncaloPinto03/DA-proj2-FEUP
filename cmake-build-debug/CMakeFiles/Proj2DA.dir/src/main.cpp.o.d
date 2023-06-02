@@ -188,4 +188,5 @@ CMakeFiles/Proj2DA.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
  /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/../data_structures/VertexEdge.h \
- /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.h
+ /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.h \
+ /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.h
