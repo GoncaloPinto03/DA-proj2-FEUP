@@ -9,9 +9,9 @@ void clearSCR() {
 }
 
 void title(const string& string) {
-    cout << "-----------------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------------" << endl;
     cout << "|            " << string << endl;
-    cout << "-----------------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------------" << endl;
 }
 
 void showMenu(const vector<string>& options, int settingsOp) {
@@ -19,7 +19,7 @@ void showMenu(const vector<string>& options, int settingsOp) {
     for (int i = 1; i <= options.size(); ++i) {
         cout << "|       " << i << "- " << options.at(i - 1) << (settingsOp == i ? " [X]" : "") << endl;
     }
-    cout << "|----------------------------------------" << endl;
+    cout << "|---------------------------------------------------------------------------------------" << endl;
 }
 
 int getInt(const string& text, const string& text2) {

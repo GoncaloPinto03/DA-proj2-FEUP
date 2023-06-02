@@ -1,25 +1,15 @@
 #include <iostream>
 #include "Read_files.h"
 #include "Manager.h"
-#include "vector"
+#include "menu.h"
 
 int main() {
 
-    Read_files readfiles = Read_files();
-    Manager manager = Manager();
-
-    //readfiles.read_extrafully(9);
-    readfiles.read_realworld(3);
-    //readfiles.read_toygraphs(3);
-
-    Graph graph = readfiles.get_graph();
-    manager.set_graph(graph);
-
-    // 4.1
-    //manager.tspBruteforce();
-
-    // 4.2
-    manager.triangular();
+    Menu menu;
+    bool run = true;
+    while (run) {
+        run = menu.nextState(0);
+    }
 
     return 0;
 }
