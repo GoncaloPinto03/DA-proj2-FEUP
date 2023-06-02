@@ -1,3 +1,3 @@
-/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles/Proj2DA.dir
-/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/goncalopinto/FEUP/2º Ano/2º Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles/Proj2DA.dir
+/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
