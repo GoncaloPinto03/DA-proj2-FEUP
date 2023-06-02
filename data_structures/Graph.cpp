@@ -50,9 +50,9 @@ bool Graph::addVertex(const int &id, string name) {
 
 
 bool Graph::removeVertex(const int &id) {
-    for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it) {
-        if ((*it)->getId() == id) {
-            vertexSet.erase(it);
+    for (auto it = vertexmap.begin(); it != vertexmap.end(); ++it) {
+        if (it->second->getId() == id) {
+            vertexmap.erase(it);
             return true;
         }
     }
@@ -78,7 +78,7 @@ Vertex * Graph::findVertex(const int &id) const {
             return v.second;
     return nullptr;
 }
-
+/*
 int Graph::findVertexIdx(const int &id) const {
     int i = 0;
     for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it, ++i)
@@ -89,12 +89,12 @@ int Graph::findVertexIdx(const int &id) const {
 
 
 void Graph::resetVisited() {
-    for (auto v : vertexSet)
+    for (auto v : vertexmap)
         v->setVisited(false);
 }
 
 void Graph::resetDist() {
-    for (auto v : vertexSet)
+    for (auto v : vertexmap)
         v->setDist(0);
 }
 
@@ -130,33 +130,9 @@ void Graph::dijkstra(Vertex* source) {
         }
     }
 }
+*/
 
-Edge * Graph::findEdge(const Vertex &source, const Vertex &dest) {
-    for (auto v : getVertexSet()) {
-        for (auto e : v.second->getAdj()) {
-            if (e->getSource()->getId() == source.getId() && e->getDest()->getId() == dest.getId()) {
-                return e;
-            }
-        }
-    }
-    return nullptr;
-}
 
-/*void Graph::dfs(int id, const vector<int> &parent_, vector<bool> &visited, stack<int> &stack, vector<int> &path) {
-    visited[id] = true;
-    stack.push(id);
-    while(!stack.empty()){
-        int top = stack.top();
-        stack.pop();
-        path.push_back(top);
-        for(int i = 0; i < parent_.size(); i++){
-            if(parent_[i] == top && !visited[i]){
-                visited[i] = true;
-                stack.push(i);
-            }
-        }
-    }
-}*/
 void Graph::dfs(const vector<Edge*> &mst, Vertex* v, vector<bool> &visited, vector<int> &path) {
     visited[v->getId()] = true;
     cout << v->getId() << " -> ";
@@ -223,7 +199,7 @@ vector<Edge*> Graph::prim() {
 bool Graph::haveEdge(int id1, int id2) {
     int i;
     for(int j = 0; j < vertexmap.size(); j++){
-        if(vertexmap[i]->getId() == id1){
+        if(vertexmap[j]->getId() == id1){
             i = j;
         }
     }
@@ -236,8 +212,8 @@ bool Graph::haveEdge(int id1, int id2) {
 }
 
 double Graph::haversine(double lat1, double lon1, double lat2, double lon2) {
-    double R = 6371e3;
-    double phi1 = lat1 * M_PI/180;
+    double R = 6371e3; // metres
+    double phi1 = lat1 * M_PI/180; // φ, λ in radians
     double phi2 = lat2 * M_PI/180;
     double deltaPhi = (lat2-lat1) * M_PI/180;
     double deltaLambda = (lon2-lon1) * M_PI/180;
@@ -295,7 +271,7 @@ double Graph::triangularApproximation() {
     cout<< "Preorder is: \n";
     vector<bool> visited(vertexmap.size(), false);
     vector<int> preorder (vertexmap.size());
-    dfs(mst, mst[0]->getDest(), visited, preorder);
+    dfs(mst, mst[0]->getSource(), visited, preorder);
     cout << '0' <<endl;
     res= getDistance(preorder);
     cout<<"Distance: "<<res<<endl;

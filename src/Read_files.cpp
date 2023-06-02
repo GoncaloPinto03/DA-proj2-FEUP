@@ -87,6 +87,7 @@ void Read_files::read_extrafully(int input) {
         this->graph.addVertex(node_1);
         this->graph.addVertex(node_2);
         this->graph.addEdge(node_1,node_2, w);
+        this->graph.addEdge(node_2,node_1, w);
     }
     file.close();
 }
@@ -149,6 +150,7 @@ void Read_files::read_realworld(int input) {
         int node2_ = stoi(node2);
         double weight_ = stod(weight);
         this->graph.addEdge(node1_, node2_, weight_);
+        this->graph.addEdge(node2_, node1_, weight_);
         //cout << "origem: " << node1_ << ' ' << "destino: " << node2_ << ' ' << "distance: " << weight_ << endl;
     }
 
@@ -201,26 +203,29 @@ void Read_files::read_toygraphs(int input) {
 
         }
     }
-    while (getline(file, line)) {
-        stringstream ss(line);
-        string token;
-        vector<string> tokens;
-        while (getline(ss, token, ',')) {
-            tokens.push_back(token);
+    else{
+        while (getline(file, line)) {
+            stringstream ss(line);
+            string token;
+            vector<string> tokens;
+            while (getline(ss, token, ',')) {
+                tokens.push_back(token);
+            }
+            int node1 = stoi(tokens[0]);
+            int node2 = stoi(tokens[1]);
+            double weight = stod(tokens[2]);
+
+            this->graph.addVertex(node1);
+
+            this->graph.addVertex(node2);
+
+            this->graph.addEdge(node1, node2, weight);
+
+            this->graph.addEdge(node2, node1, weight);
+
         }
-        int node1 = stoi(tokens[0]);
-        int node2 = stoi(tokens[1]);
-        double weight = stod(tokens[2]);
-
-        this->graph.addVertex(node1);
-
-        this->graph.addVertex(node2);
-
-        this->graph.addEdge(node1, node2, weight);
-
-        this->graph.addEdge(node2, node1, weight);
-
     }
+
     file.close();
 
 }

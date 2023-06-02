@@ -19,7 +19,7 @@ struct CompareVertex
 
 struct CompareWeight
 {
-    bool operator()(const Edge* lhs, const Edge* rhs) const  { return lhs->getWeight() < rhs->getWeight(); }
+    bool operator()(const Edge* lhs, const Edge* rhs) const  { return lhs->getWeight() > rhs->getWeight(); }
 };
 
 class Graph {
@@ -65,11 +65,9 @@ public:
 protected:
     int numVertex;
     vector<Vertex *> vertexSet2;
-    set<Vertex*, CompareVertex> vertexSet;
+    //set<Vertex*, CompareVertex> vertexSet;
 
     unordered_map<int, Vertex *> vertexmap;
-
-
 
     vector<Edge *> edges;
 
