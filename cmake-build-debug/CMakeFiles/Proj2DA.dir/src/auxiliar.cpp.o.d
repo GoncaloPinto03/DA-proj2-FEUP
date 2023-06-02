@@ -1,7 +1,13 @@
 CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o: \
+<<<<<<< HEAD
  /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp \
  /usr/include/stdc-predef.h \
  /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.h \
+=======
+ /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/auxiliar.cpp \
+ /usr/include/stdc-predef.h \
+ /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/auxiliar.h \
+>>>>>>> 19588fdcf124ca54f705b252d8979561585db70f
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug"/>
+				<Option working_dir="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proj2DA">
-				<Option output="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Proj2DA" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug"/>
+				<Option output="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Proj2DA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2DA"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2DA"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proj2DA/fast">
-				<Option output="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Proj2DA" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug"/>
+				<Option output="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Proj2DA" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,66 +55,67 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2DA/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2DA/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug"/>
+				<Option working_dir="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug"/>
+				<Option working_dir="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Graph.cpp">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/Graph.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Graph.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/Graph.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/Heap.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/Heap.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/MutablePriorityQueue.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/MutablePriorityQueue.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/UFDS.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/UFDS.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/VertexEdge.cpp">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/VertexEdge.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/data_structures/VertexEdge.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/data_structures/VertexEdge.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.cpp">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Manager.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Manager.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Manager.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Read_files.cpp">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/Read_files.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/Read_files.h">
 			<Option target="Proj2DA"/>
 		</Unit>
+<<<<<<< HEAD
 		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/auxiliar.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
@@ -122,15 +123,24 @@
 			<Option target="Proj2DA"/>
 		</Unit>
 		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/main.cpp">
+=======
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/auxiliar.cpp">
+>>>>>>> 19588fdcf124ca54f705b252d8979561585db70f
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.cpp">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/auxiliar.h">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/src/menu.h">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/main.cpp">
 			<Option target="Proj2DA"/>
 		</Unit>
-		<Unit filename="/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/CMakeLists.txt">
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/menu.cpp">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/src/menu.h">
+			<Option target="Proj2DA"/>
+		</Unit>
+		<Unit filename="/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

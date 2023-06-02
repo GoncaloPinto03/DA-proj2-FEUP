@@ -54,11 +54,6 @@ vector<Edge*> Vertex::getAdj() const {
     return this->adj;
 }
 
-void Vertex::addAdj(Vertex *v1, Vertex *v2, double w)  {
-
-    //adj.insert(adj.end(), new Edge(v1, v2, w));
-    adj.push_back(new Edge(v1,v2,w));
-}
 
 void Vertex::setId(int id) {
     this->id = id;
@@ -95,6 +90,10 @@ Edge::Edge(Vertex* source, Vertex* dest) {
     this->source = source;
     this->dest = dest;
     this->weight = 0;
+}
+Edge::Edge(Vertex* dest, double weight){
+    this->dest = dest;
+    this->weight = weight;
 }
 Vertex* Edge::getDest() const {
     return dest;
