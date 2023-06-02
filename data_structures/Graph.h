@@ -54,8 +54,8 @@ public:
 
     void dijkstra(Vertex* source);
     vector<Vertex *> vertexes;
-    void dfs(int id, const vector<int> &parent_, vector<bool> &visited, stack<int> &stack, vector<int> &path);
-    vector<pair<int,int>> prim(vector<int> &parents);
+    //void dfs(int id, const vector<int> &parent_, vector<bool> &visited, stack<int> &stack, vector<int> &path);
+    //vector<pair<int,int>> prim(vector<int> &parents);
     int minWeight(vector<double> &weights, vector<bool> &visited);
     bool haveEdge(int id1, int id2);
     double haversine(double lat1, double lon1, double lat2, double lon2);
@@ -72,6 +72,10 @@ protected:
 
 
     vector<Edge *> edges;
+
+    void dfs(const vector<Edge *> &mst, Vertex *v, vector<bool> &visited, vector<int> &path);
+
+    vector<Edge *> prim();
 };
 
 #endif

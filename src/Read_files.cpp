@@ -149,7 +149,7 @@ void Read_files::read_realworld(int input) {
         int node2_ = stoi(node2);
         double weight_ = stod(weight);
         this->graph.addEdge(node1_, node2_, weight_);
-        cout << "origem: " << node1_ << ' ' << "destino: " << node2_ << ' ' << "distance: " << weight_ << endl;
+        //cout << "origem: " << node1_ << ' ' << "destino: " << node2_ << ' ' << "distance: " << weight_ << endl;
     }
 
     file_nodes.close();

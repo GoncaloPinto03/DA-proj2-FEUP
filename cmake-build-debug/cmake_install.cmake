@@ -1,4 +1,4 @@
-# Install script for directory: /home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA
+# Install script for directory: /home/guca/Desktop/Faculdade/2ano/DA/Proj2DA
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/miguelvalente/Documents/Faculdade/DA-FEUP-2Time/Project2/Proj2DA/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
