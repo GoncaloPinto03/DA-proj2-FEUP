@@ -43,11 +43,19 @@ bool Menu::nextState(int key) {
             secondOption();
             return true;
         case 3:
-            state = 5;
+            state = 7;
             return true;
         case 4:
+            first();
+            state = 7;
+            return true;
+        case 5:
             second();
-            state = 5;
+            state = 7;
+            return true;
+        case 6:
+            third();
+            state = 7;
             return true;
         default:
             return false;
@@ -61,7 +69,7 @@ void Menu::firstOption() {
     Graph graph = readfiles.get_graph();
     manager.set_graph(graph);
 
-    title("Choose the number of the file you wish to run (1-3).");
+    title("Choose the number of the file you wish to run.");
     showMenu(firstOptions);
 
     int key = getInt("Choose an option.");
@@ -91,20 +99,42 @@ bool Menu::secondOption() {
 
     switch (key) {
         case 1:
-            readfiles.read_extrafully(key);
             state = 4;
             return true;
         case 2:
-            readfiles.read_realworld(key);
-            state = 4;
+            state = 5;
             return true;
         case 3:
-            readfiles.read_toygraphs(key);
-            state = 4;
+            state = 6;
             return true;
         default:
             return false;
     }
+}
+
+void Menu::first() {
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    title("Choose the number of the file you wish to run.");
+    showMenu(thirdOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 12) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    readfiles.read_extrafully(key);
+
+    manager.triangular();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
 }
 
 void Menu::second() {
@@ -113,6 +143,41 @@ void Menu::second() {
 
     Graph graph = readfiles.get_graph();
     manager.set_graph(graph);
+
+    title("Choose the graph you wish to run.");
+    showMenu(fourthOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    readfiles.read_realworld(key);
+
+    manager.triangular();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
+}
+
+void Menu::third() {
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    title("Choose the number of the file you wish to run.");
+    showMenu(firstOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    readfiles.read_toygraphs(key);
 
     manager.triangular();
 

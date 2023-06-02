@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj2DA.dir/src/Manager.cpp.o.d"
   "CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o"
   "CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o.d"
+  "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o"
+  "CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o.d"
   "CMakeFiles/Proj2DA.dir/src/main.cpp.o"
   "CMakeFiles/Proj2DA.dir/src/main.cpp.o.d"
   "CMakeFiles/Proj2DA.dir/src/menu.cpp.o"

@@ -225,6 +225,30 @@ src/Read_files.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/Read_files.cpp.s
 .PHONY : src/Read_files.cpp.s
 
+src/auxiliar.o: src/auxiliar.cpp.o
+.PHONY : src/auxiliar.o
+
+# target to build an object file
+src/auxiliar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o
+.PHONY : src/auxiliar.cpp.o
+
+src/auxiliar.i: src/auxiliar.cpp.i
+.PHONY : src/auxiliar.i
+
+# target to preprocess a source file
+src/auxiliar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.i
+.PHONY : src/auxiliar.cpp.i
+
+src/auxiliar.s: src/auxiliar.cpp.s
+.PHONY : src/auxiliar.s
+
+# target to generate assembly for a file
+src/auxiliar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Proj2DA.dir/build.make CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.s
+.PHONY : src/auxiliar.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... src/Read_files.o"
 	@echo "... src/Read_files.i"
 	@echo "... src/Read_files.s"
+	@echo "... src/auxiliar.o"
+	@echo "... src/auxiliar.i"
+	@echo "... src/auxiliar.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
