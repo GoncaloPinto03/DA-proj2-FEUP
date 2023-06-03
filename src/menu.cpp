@@ -38,6 +38,7 @@ bool Menu::nextState(int key) {
             return true;
         case 1:
             firstOption();
+            state = 7;
             return true;
         case 2:
             secondOption();
