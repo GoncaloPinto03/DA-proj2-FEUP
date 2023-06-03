@@ -218,10 +218,7 @@ void Read_files::read_toygraphs(int input) {
             this->graph.addEdge(node1, node2, weight);
 
             this->graph.addEdge(node2, node1, weight);
-
         }
     }
-
     file.close();
-
 }

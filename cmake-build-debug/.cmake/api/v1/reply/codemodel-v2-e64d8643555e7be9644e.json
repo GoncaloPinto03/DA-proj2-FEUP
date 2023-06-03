@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Proj2DA::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proj2DA-Debug-318d369547f57a5686b1.json",
+					"jsonFile" : "target-Proj2DA-Debug-8b4c61556f361c835d70.json",
 					"name" : "Proj2DA",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/goncalopinto/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj2DA/cmake-build-debug",
-		"source" : "/Users/goncalopinto/FEUP/2\u00ba Ano/2\u00ba Semestre/Desenho de Algoritmos/Proj2DA"
+		"build" : "/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA/cmake-build-debug",
+		"source" : "/home/guca/Desktop/Faculdade/2ano/DA/Proj2DA"
 	},
 	"version" : 
 	{
