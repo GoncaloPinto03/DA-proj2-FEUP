@@ -64,13 +64,10 @@ int Graph::getNumVertex() const {
     return vertexmap.size();
 }
 
-const unordered_map<int, Vertex*> Graph::getVertexSet() const {
+unordered_map<int, Vertex*> Graph::getVertexSet() const {
     return vertexmap;
 }
 
-vector<Vertex *> Graph::getVertexSet2() const {
-    return vertexSet2;
-}
 
 Vertex *Graph::findVertex(const int &id) const {
     auto it = vertexmap.find(id);
@@ -201,7 +198,7 @@ double Graph::getDistance(const vector<int> &path) {
 }
 
 
-double Graph::triangularApproximation() {
+void Graph::triangularApproximation() {
     double res=0.0;
     vector<Edge*>mst = prim();
 
