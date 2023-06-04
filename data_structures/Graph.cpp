@@ -238,15 +238,17 @@ double Graph::nearestNeighbor(Vertex* initialNode, Vertex* currentNode, vector<E
         path.push_back(minEdge);
         return nearestNeighbor(initialNode, minEdge->getDest(), path, graphSize, distance + minEdge->getWeight());
     }
+
     auto edge = path[0];
-    for (auto e : path) {
-        cout << e->getSource()->getId() << " -> ";
-        edge = e;
+    for (auto i = 0; i < path.size(); i++) {
+        cout << path[i]->getSource()->getId() << " -> ";
+        edge = path[i];
     }
     cout << edge->getDest()->getId() << " -> ";
     cout << "0" << endl;
 
     cout << "Distance: " << distance << endl;
+
     return distance;
 
 }

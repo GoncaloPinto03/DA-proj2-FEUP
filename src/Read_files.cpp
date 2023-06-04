@@ -161,7 +161,7 @@ void Read_files::read_toygraphs(int input) {
 
     ifstream file(filename);
 
-    if(!file.is_open())cout<<"Couldn't open the file!";
+    if(!file.is_open()) cout<<"Couldn't open the file!" << endl;
     string line;
     int i= 0;
     getline(file,line);
