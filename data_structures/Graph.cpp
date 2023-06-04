@@ -238,8 +238,9 @@ double Graph::nearestNeighbor(Vertex* initialNode, Vertex* currentNode, vector<E
         path.push_back(minEdge);
         return nearestNeighbor(initialNode, minEdge->getDest(), path, graphSize, distance + minEdge->getWeight());
     }
-    cout << distance << endl;
+
     return distance;
+
 }
 
 Edge* Graph::findMinEdge(Vertex* currentNode) {

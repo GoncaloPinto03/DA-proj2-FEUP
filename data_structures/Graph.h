@@ -88,53 +88,93 @@ public:
     Vertex * findVertex(const int &id) const;
 
     /**
-    * @brief Checks if there's an edge between to vertexes given 2 ids. Returns true if so and false otherwise.
-    * @param id1 The id of the source vertex to find.
-    * @param id2 The id of the dest vertex to find.
-    * @return True if there's an edge between those two vertexes. False otherwise.
-    */
-    bool haveEdge(int id1, int id2);
+     * Check if there is an edge between two vertices.
+     *
+     * @param source The ID of the source vertex.
+     * @param dest The ID of the destination vertex.
+     *
+     * @return True if there is an edge between the vertices, False otherwise.
+     *
+     * @complexity O(|V| + |E|), where |V| is the number of vertices and |E| is the number of edges.
+     */
+    bool haveEdge(int source, int dest);
 
     /**
-    * @brief Computes the distance between two given points (longitude and latitude).
-    * @param lat1 The latitude of the first point.
-    * @param lon1 The longitude of the first point.
-    * @param lat2 The latitude of the second point.
-    * @param lon2 The longitude of the second point.
-    * @return Returns the distance between those 2 points.
-    */
+     * Calculate the haversine distance between two sets of latitude and longitude coordinates.
+     *
+     * @param lat1 The latitude of the first point.
+     * @param lon1 The longitude of the first point.
+     * @param lat2 The latitude of the second point.
+     * @param lon2 The longitude of the second point.
+     *
+     * @return The haversine distance between the points.
+     *
+     * @complexity O(1)
+     */
     double haversine(double lat1, double lon1, double lat2, double lon2);
 
+
     /**
-    * @brief This function calculates the total distance given a certain path (vertexes).
-    * @param path The vector of ints, where each int corresponds to a vertex.
-    * @return Returns the total distance of tha path.
-    */
+     * Calculate the total distance of a given path (tour) in the graph.
+     *
+     * @param path The vector of vertices representing the path.
+     *
+     * @return The total distance of the path.
+     *
+     * @complexity O(|V| + |E|), where |V| is the number of vertices and |E| is the number of edges.
+     */
     double calculate_total_distance(const vector<int> &path);
 
     /**
     * @brief This function prints the path ans the distance of the triangular approximation algorithm.
+    * @complexity O(|V| + |E| log |V|), where |V| is the number of vertices and |E| is the number of edges.
     */
     void triangularApproximationHeuristic();
 
+
     /**
- * @brief Perform a Depth-First Search (DFS) traversal on a graph starting from a given vertex.
- * @param mst The minimum spanning tree of the graph.
- * @param v   The starting vertex for the DFS traversal.
- * @param visited A vector indicating whether a vertex has been visited.
- * @param path A vector that stores the path traversed during the DFS traversal.
- * @return void
- */
+    * Perform Depth-First Search (DFS) traversal starting from the given vertex,
+    * while recording the traversal order in the preorder vector and marking visited vertices.
+    *
+    * @param mst The minimum spanning tree.
+    * @param v The current vertex being visited.
+    * @param visited A vector to mark visited vertices.
+    * @param path A vector to store the traversal order (preorder).
+    *
+    * @complexity O(|V| + |E|), where |V| is the number of vertices and |E| is the number of edges.
+    */
     void dfs(const vector<Edge *> &mst, Vertex *v, vector<bool> &visited, vector<int> &path);
 
     /**
-    * @brief This function computes the Prim Algorithm to find the MST of the graph.
-    * @return Returns the MST as a vector of Edges.
-    */
+     * Generate the Minimum Spanning Tree (MST) of the graph using Prim's algorithm.
+     *
+     * @return The vector of edges representing the minimum spanning tree.
+     *
+     * @complexity O(|E| log |V|), where |V| is the number of vertices and |E| is the number of edges.
+     */
     vector<Edge *> prim_MST();
 
+    /**
+     * Find the approximate solution to the Traveling Salesman Problem (TSP)
+     * using the Nearest Neighbor heuristic.
+     *
+     * @param initialNode The starting node for the tour.
+     * @param currentNode The current node being visited.
+     * @param path The vector to store the edges of the tour.
+     * @param graphSize The number of nodes in the graph.
+     * @param distance The current distance of the tour.
+     *
+     * @return The approximate distance of the TSP tour.
+     *
+     * @complexity O(n^2) where n is the number of nodes in the graph.
+     */
     double nearestNeighbor(Vertex* initialNode, Vertex* currentNode, vector<Edge*>& path, int graphSize, double distance);
 
+    /**
+    * @brief This function gets the edge with the minimum weight of a given vertex.
+    * @param currentNode The current vertex
+    * @return Returns the edge with the minimum weight.
+    */
     Edge* findMinEdge(Vertex* currentNode);
 
 protected:

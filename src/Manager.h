@@ -38,23 +38,33 @@ public:
 
     // 4.1
     /**
-     * @brief This function is responsible for the Backtracking Algorithm (4.1).
-     * @param current The current vertex.
-     * @param current_cost The current cost.
-     * @param num_visited The number of visited vertexes.
-     * @param min_cost The minimum cost read.
-     * @param tsp_path The vector of Vertex objects that represent the path being followed.
+     * Perform backtracking to find the optimal solution for the Traveling Salesman Problem (TSP).
+     * The function recursively explores all possible paths from the current vertex and updates the minimum cost and path.
+     *
+     * @param current_vertex The current vertex being visited.
+     * @param current_cost The current cost of the path.
+     * @param num_visited The number of visited vertices.
+     * @param min_cost Reference to the minimum cost found so far.
+     * @param tsp_path Reference to the vector of vertices representing the TSP path.
+     *
+     * @complexity O(N!), where N is the number of vertices. The backtracking algorithm explores all possible permutations.
      */
     void tspBacktrack(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
 
     /**
-     * @brief This function calls the previous function tspBacktrack() and returns the final path, minimum cost and prints its time of execution.
+     * Solve the Traveling Salesman Problem (TSP) using backtracking.
+     * The function initializes the necessary variables, calls the backtracking function,
+     * and prints the minimum cost and TSP path.
+     *
+     * @complexity O(N!), where N is the number of vertices. The backtracking algorithm explores all possible permutations.
      */
     void tspMain();
 
     // 4.2
     /**
-     * @brief This function is responsible for the Triangular Approximation Heuristic Algorithm (4.2).
+     * This function calls the triangularApproximationHeuristic() function of the graph object and measures the execution time.
+     *
+     * @complexity O(|V| + |E| log |V|), where |V| is the number of vertices and |E| is the number of edges.
      */
     void triangular();
 };
