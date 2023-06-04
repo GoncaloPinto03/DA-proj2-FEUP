@@ -5,6 +5,7 @@
 
 int main() {
 
+    
     Menu menu;
     bool run = true;
     while (run) {
@@ -31,13 +32,8 @@ int main() {
     // 4.2
     //manager.triangular();
 
-    //Vertex* initialNode, Vertex* currentNode, vector<Edge*>& path, int graphSize, double distance
-    auto initialNode = manager.graph.getVertexSet()[0];
-    auto currentNode = manager.graph.getVertexSet()[0];
-    vector<Edge*> path;
-    int graphSize = manager.graph.getNumVertex();
-    double distance = 0;
-    manager.graph.nearestNeighbor(initialNode, currentNode, path, graphSize,distance);
+    // 4.3
+    //manager.ourHeuristic();
 
     */
 

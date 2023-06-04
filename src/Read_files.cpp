@@ -174,7 +174,6 @@ void Read_files::read_toygraphs(int input) {
             while(getline(ss,t,',')){
                 aux.push_back(t);
             }
-
             int node1 = stoi(aux[0]);
             int node2 = stoi(aux[1]);
             double w = stod (aux[2]);
@@ -184,9 +183,6 @@ void Read_files::read_toygraphs(int input) {
             this->graph.addVertex(node2, name2);
             this->graph.addEdge(node1, node2, w);
             this->graph.addEdge(node2, node1, w);
-
-            //cout << node_1 << ' '<< node_2 << ' '<<w <<' ' << name1<<' ' << name2 << endl;
-
         }
     }
     else{

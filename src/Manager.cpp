@@ -104,10 +104,28 @@ void Manager::tspMain() {
 
 // 4.2
 void Manager::triangular() {
+
     clock_t start = clock();
     this->graph.triangularApproximationHeuristic();
     clock_t end = clock();
-
-    //cout << "Triangular Approximation: " << total << endl;
     cout << "Time: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+
+}
+
+// 4.3
+void Manager::ourHeuristic() {
+    clock_t start = clock();
+
+    auto initialNode =  graph.getVertexSet()[0];
+    auto currentNode = graph.getVertexSet()[0];
+
+    vector<Edge*> path;
+    int graphSize = graph.getNumVertex();
+
+    double distance = 0;
+
+    graph.nearestNeighbor(initialNode, currentNode, path, graphSize,distance);
+
+    clock_t end = clock();
+    cout << "Execution Time: " << double(end - start) / CLOCKS_PER_SEC << " seconds" << endl;
 }

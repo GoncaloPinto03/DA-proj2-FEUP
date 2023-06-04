@@ -67,6 +67,9 @@ public:
      * @complexity O(|V| + |E| log |V|), where |V| is the number of vertices and |E| is the number of edges.
      */
     void triangular();
+
+    // 4.3
+    void ourHeuristic();
 };
 
 #endif //PROJ2DA_MANAGER_H
