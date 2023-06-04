@@ -39,25 +39,37 @@ bool Menu::nextState(int key) {
             return true;
         case 1:
             firstOption();
-            state = 7;
+            state = 10;
             return true;
         case 2:
             secondOption();
             return true;
         case 3:
-            state = 7;
+            thirdOption();
             return true;
         case 4:
             first();
-            state = 7;
+            state = 10;
             return true;
         case 5:
             second();
-            state = 7;
+            state = 10;
             return true;
         case 6:
             third();
-            state = 7;
+            state = 10;
+            return true;
+        case 7:
+            fourth();
+            state = 10;
+            return true;
+        case 8:
+            fifth();
+            state = 10;
+            return true;
+        case 9:
+            sixth();
+            state = 10;
             return true;
         default:
             return false;
@@ -107,6 +119,30 @@ bool Menu::secondOption() {
             return true;
         case 3:
             state = 6;
+            return true;
+        default:
+            return false;
+    }
+}
+
+bool Menu::thirdOption() {
+    title("Choose the folder of files you wish to test:");
+    showMenu(secondOptions);
+
+    int key = getInt("Choose an option");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    switch (key) {
+        case 1:
+            state = 7;
+            return true;
+        case 2:
+            state = 8;
+            return true;
+        case 3:
+            state = 9;
             return true;
         default:
             return false;
@@ -181,6 +217,81 @@ void Menu::third() {
     manager.set_graph(graph);
 
     manager.triangular();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
+}
+
+void Menu::fourth() {
+    title("Choose the number of the file you wish to run.");
+    showMenu(thirdOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 12) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    readfiles.read_extrafully(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    manager.ourHeuristic();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
+}
+
+void Menu::fifth() {
+    title("Choose the graph you wish to run.");
+    showMenu(fourthOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    readfiles.read_realworld(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    manager.ourHeuristic();
+
+    cout << "Thanks for using our program!" << endl;
+    cout << "Click Enter!";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.get();
+}
+
+void Menu::sixth() {
+    title("Choose the number of the file you wish to run.");
+    showMenu(firstOptions);
+
+    int key = getInt("Choose an option.");
+    while (key < 1 || key > 3) {
+        key = getInt("Not a valid option. Choose a valid option.");
+    }
+
+    Read_files readfiles = Read_files();
+    Manager manager = Manager();
+
+    readfiles.read_toygraphs(key);
+
+    Graph graph = readfiles.get_graph();
+    manager.set_graph(graph);
+
+    manager.ourHeuristic();
 
     cout << "Thanks for using our program!" << endl;
     cout << "Click Enter!";

@@ -37,6 +37,10 @@ private:
     */
     bool secondOption();
     /**
+    * @brief Displays the third option menu
+    */
+    bool thirdOption();
+    /**
     * @brief Runs the first scenario
     */
     void first();
@@ -48,6 +52,18 @@ private:
     * @brief Runs the third scenario
     */
     void third();
+    /**
+    * @brief Runs the fourth scenario
+    */
+    void fourth();
+    /**
+    * @brief Runs the fifth scenario
+    */
+    void fifth();
+    /**
+    * @brief Runs the sixth scenario
+    */
+    void sixth();
 
 public:
     /**
