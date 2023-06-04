@@ -3,9 +3,6 @@
 #include <iostream>
 #include "vector"
 #include <limits>
-#include "../data_structures/Graph.h"
-#include "../data_structures/VertexEdge.h"
-#include "../data_structures/MutablePriorityQueue.h"
 
 using namespace std;
 
@@ -22,45 +19,49 @@ void Manager::set_graph(Graph newGraph) {
 }
 
 // 4.1
-void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path) {
+void Manager::tspBacktrack(Vertex* current_vertex, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path) {
 
-    bool vi=false;
-    double costt=0;
+    bool vi = false;
+    double costt = 0;
+
     if (num_visited == graph.getNumVertex()) {
 
-        for(Edge* e: current->getAdj()){
-            Vertex* w = e->getDest();
+        for(Edge* edge: current_vertex->getAdj()){
+            Vertex* w = edge->getDest();
+
             if(w==graph.findVertex(0)){
-                costt = e->getWeight();
+                costt = edge->getWeight();
                 vi=true;
             }
-
         }
 
         if(vi==false) return;
 
         double cost = current_cost + costt;
+
         if (cost < min_cost) {
+
             min_cost = cost;
             tsp_path.clear();
-            tsp_path.push_back(current);
-            //? id may not be needed
-            for (Edge* e = current->getPath(); e->getSource()->getId() != graph.findVertex(0)->getId(); e = e->getSource()->getPath()) {
+            tsp_path.push_back(current_vertex);
+
+            for (Edge* e = current_vertex->getPath(); e->getSource()->getId() != graph.findVertex(0)->getId(); e = e->getSource()->getPath()) {
                 tsp_path.push_back(e->getSource());
             }
 
             std::reverse(tsp_path.begin(), tsp_path.end());
-
         }
         return;
     }
 
-    for (Edge* e: current->getAdj()) {
-        Vertex* w = e->getDest();
+    for (Edge* edge: current_vertex->getAdj()) {
+
+        Vertex* w = edge->getDest();
+
         if (!w->isVisited()) {
             w->setVisited(true);
-            w->setPath(e);
-            tspBacktrackBruteforce(w, current_cost + e->getWeight(), num_visited + 1, min_cost, tsp_path);
+            w->setPath(edge);
+            tspBacktrack(w, current_cost + edge->getWeight(), num_visited + 1, min_cost, tsp_path);
             w->setVisited(false);
             w->setPath(nullptr);
         }
@@ -68,7 +69,7 @@ void Manager::tspBacktrackBruteforce(Vertex* current, double current_cost, int n
 }
 
 // 4.1
-void Manager::tspBruteforce() {
+void Manager::tspMain() {
 
     clock_t start = clock();
 
@@ -85,7 +86,7 @@ void Manager::tspBruteforce() {
 
     init->setVisited(true);
 
-    tspBacktrackBruteforce(init, 0, 1, min_cost, tsp_path);
+    tspBacktrack(init, 0, 1, min_cost, tsp_path);
 
     cout << "Minimum Cost: "<< min_cost << endl;
 
@@ -104,7 +105,7 @@ void Manager::tspBruteforce() {
 // 4.2
 void Manager::triangular() {
     clock_t start = clock();
-    this->graph.triangularApproximation();
+    this->graph.triangularApproximationHeuristic();
     clock_t end = clock();
 
     //cout << "Triangular Approximation: " << total << endl;

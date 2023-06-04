@@ -110,12 +110,12 @@ public:
     * @param path The vector of ints, where each int corresponds to a vertex.
     * @return Returns the total distance of tha path.
     */
-    double getDistance(const vector<int> &path);
+    double calculate_total_distance(const vector<int> &path);
 
     /**
     * @brief This function prints the path ans the distance of the triangular approximation algorithm.
     */
-    void triangularApproximation();
+    void triangularApproximationHeuristic();
 
     /**
  * @brief Perform a Depth-First Search (DFS) traversal on a graph starting from a given vertex.
@@ -131,9 +131,14 @@ public:
     * @brief This function computes the Prim Algorithm to find the MST of the graph.
     * @return Returns the MST as a vector of Edges.
     */
-    vector<Edge *> prim();
+    vector<Edge *> prim_MST();
+
+    double nearestNeighbor(Vertex* initialNode, Vertex* currentNode, vector<Edge*>& path, int graphSize, double distance);
+
+    Edge* findMinEdge(Vertex* currentNode);
 
 protected:
+
     int numVertex; /**< Number of vertexes from the graph we are working with. */
 
     unordered_map<int, Vertex *> vertexmap; /**< Unordered Map that stores all the vertexes from the graph.*/
@@ -141,6 +146,7 @@ protected:
     vector<Edge *> edges; /**< Vector that stores all the edges from the graph.*/
 
     vector<Vertex *> vertexes; /**< Vector that stores all the vertexes from the graph.*/
+
 };
 
 #endif

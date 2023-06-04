@@ -1,17 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <limits>
-#include <algorithm>
-#include <list>
-#include <set>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include "Read_files.h"
-#include "menu.h"
-#include "auxiliar.h"
-#include "../data_structures/Graph.h"
 
 using namespace std;
 
@@ -22,8 +14,6 @@ Read_files::Read_files(){
 Graph Read_files::get_graph() {
     return this->graph;
 }
-
-
 
 void Read_files::read_extrafully(int input) {
     string filename;
@@ -79,13 +69,13 @@ void Read_files::read_extrafully(int input) {
             aux.push_back(t);
         }
 
-        int node_1= stoi(aux[0]);
-        int node_2= stoi(aux[1]);
+        int node1= stoi(aux[0]);
+        int node2= stoi(aux[1]);
         double w=stod(aux[2]);
-        this->graph.addVertex(node_1);
-        this->graph.addVertex(node_2);
-        this->graph.addEdge(node_1,node_2, w);
-        this->graph.addEdge(node_2,node_1, w);
+        this->graph.addVertex(node1);
+        this->graph.addVertex(node2);
+        this->graph.addEdge(node1,node2, w);
+        this->graph.addEdge(node2,node1, w);
     }
     file.close();
 }
@@ -185,15 +175,15 @@ void Read_files::read_toygraphs(int input) {
                 aux.push_back(t);
             }
 
-            int node_1 = stoi(aux[0]);
-            int node_2 = stoi(aux[1]);
+            int node1 = stoi(aux[0]);
+            int node2 = stoi(aux[1]);
             double w = stod (aux[2]);
             string name1 = aux[3];
             string name2 = aux[4];
-            this->graph.addVertex(node_1, name1);
-            this->graph.addVertex(node_2, name2);
-            this->graph.addEdge(node_1, node_2, w);
-            this->graph.addEdge(node_2, node_1, w);
+            this->graph.addVertex(node1, name1);
+            this->graph.addVertex(node2, name2);
+            this->graph.addEdge(node1, node2, w);
+            this->graph.addEdge(node2, node1, w);
 
             //cout << node_1 << ' '<< node_2 << ' '<<w <<' ' << name1<<' ' << name2 << endl;
 
@@ -202,14 +192,14 @@ void Read_files::read_toygraphs(int input) {
     else{
         while (getline(file, line)) {
             stringstream ss(line);
-            string token;
-            vector<string> tokens;
-            while (getline(ss, token, ',')) {
-                tokens.push_back(token);
+            string t;
+            vector<string> aux;
+            while (getline(ss, t, ',')) {
+                aux.push_back(t);
             }
-            int node1 = stoi(tokens[0]);
-            int node2 = stoi(tokens[1]);
-            double weight = stod(tokens[2]);
+            int node1 = stoi(aux[0]);
+            int node2 = stoi(aux[1]);
+            double weight = stod(aux[2]);
 
             this->graph.addVertex(node1);
 

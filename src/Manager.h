@@ -45,12 +45,12 @@ public:
      * @param min_cost The minimum cost read.
      * @param tsp_path The vector of Vertex objects that represent the path being followed.
      */
-    void tspBacktrackBruteforce(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
+    void tspBacktrack(Vertex* current, double current_cost, int num_visited, double& min_cost, std::vector<Vertex *>& tsp_path);
 
     /**
-     * @brief This function calls the previous function tspBacktrackBruteforce() and returns the final path, minimum cost and prints its time of execution.
+     * @brief This function calls the previous function tspBacktrack() and returns the final path, minimum cost and prints its time of execution.
      */
-    void tspBruteforce();
+    void tspMain();
 
     // 4.2
     /**

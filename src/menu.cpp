@@ -3,6 +3,7 @@
 #include "auxiliar.h"
 #include "Manager.h"
 #include "Read_files.h"
+
 using namespace std;
 
 void Menu::mainMenu() {
@@ -80,7 +81,7 @@ void Menu::firstOption() {
     Graph graph = readfiles.get_graph();
     manager.set_graph(graph);
 
-    manager.tspBruteforce();
+    manager.tspMain();
 
     cout << "Thanks for using our program!" << endl;
     cout << "Click Enter!";

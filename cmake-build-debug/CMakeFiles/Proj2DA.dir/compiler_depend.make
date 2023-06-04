@@ -2243,8 +2243,7 @@ CMakeFiles/Proj2DA.dir/src/Manager.cpp.o: /Users/goncalopinto/Desktop/Proj2DA/sr
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
   /Users/goncalopinto/Desktop/Proj2DA/data_structures/VertexEdge.h \
-  /Users/goncalopinto/Desktop/Proj2DA/src/Read_files.h \
-  /Users/goncalopinto/Desktop/Proj2DA/data_structures/MutablePriorityQueue.h
+  /Users/goncalopinto/Desktop/Proj2DA/src/Read_files.h
 
 CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: /Users/goncalopinto/Desktop/Proj2DA/src/Read_files.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
@@ -2978,11 +2977,6 @@ CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: /Users/goncalopinto/Desktop/Proj2DA
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -3004,11 +2998,13 @@ CMakeFiles/Proj2DA.dir/src/Read_files.cpp.o: /Users/goncalopinto/Desktop/Proj2DA
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
   /Users/goncalopinto/Desktop/Proj2DA/src/Read_files.h \
   /Users/goncalopinto/Desktop/Proj2DA/data_structures/Graph.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/stack \
-  /Users/goncalopinto/Desktop/Proj2DA/data_structures/VertexEdge.h \
-  /Users/goncalopinto/Desktop/Proj2DA/src/menu.h \
-  /Users/goncalopinto/Desktop/Proj2DA/src/Manager.h \
-  /Users/goncalopinto/Desktop/Proj2DA/src/auxiliar.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/set \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
+  /Users/goncalopinto/Desktop/Proj2DA/data_structures/VertexEdge.h
 
 CMakeFiles/Proj2DA.dir/src/auxiliar.cpp.o: /Users/goncalopinto/Desktop/Proj2DA/src/auxiliar.cpp \
   /Users/goncalopinto/Desktop/Proj2DA/src/auxiliar.h \
@@ -5272,9 +5268,9 @@ CMakeFiles/Proj2DA.dir/src/menu.cpp.o: /Users/goncalopinto/Desktop/Proj2DA/src/m
   /Users/goncalopinto/Desktop/Proj2DA/src/Read_files.h
 
 
-/Users/goncalopinto/Desktop/Proj2DA/src/auxiliar.cpp:
-
 /Users/goncalopinto/Desktop/Proj2DA/src/menu.h:
+
+/Users/goncalopinto/Desktop/Proj2DA/src/auxiliar.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/operations.h:
 
@@ -5633,8 +5629,6 @@ CMakeFiles/Proj2DA.dir/src/menu.cpp.o: /Users/goncalopinto/Desktop/Proj2DA/src/m
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/mergeable.h:
-
-/Users/goncalopinto/Desktop/Proj2DA/data_structures/MutablePriorityQueue.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/insert_iterator.h:
 
